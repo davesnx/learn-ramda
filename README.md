@@ -1,4 +1,6 @@
-## learn ramda, The interactive way
+# Learn ramda, the interactive way
+
+![](./docs/demo.gif)
 
 ## Thanks
 
