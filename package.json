@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@kiwicom/orbit-components": "^0.36.0",
+    "prism-react-renderer": "^0.1.6",
+    "ramda": "^0.26.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-select": "^2.4.2",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
