@@ -40,20 +40,18 @@ const Example = ({ data }) => {
 const Solution = ({ data }) => {
   return (
     <Fragment>
-      {R.hasPath(['func'], data) && (
-        <Card>
-          <CardHeader title={data.func.name} subTitle={data.func.resource} />
-          <CardSection>
-            <CardSectionContent>
-              <Heading type='title3' element='h3'>
-                {data.func.notation}
-              </Heading>
-              <Text>{data.func.description}</Text>
-            </CardSectionContent>
-          </CardSection>
-          {R.hasPath(['example'], data) && <Example data={data.example} />}
-        </Card>
-      )}
+      <Card>
+        <CardHeader title={data.name} subTitle={data.resource} />
+        <CardSection>
+          <CardSectionContent>
+            <Heading type='title3' element='h3'>
+              {data.notation}
+            </Heading>
+            <Text>{data.description}</Text>
+          </CardSectionContent>
+        </CardSection>
+        {R.hasPath(['example'], data) && <Example data={data.example} />}
+      </Card>
     </Fragment>
   )
 }
@@ -95,7 +93,16 @@ const App = ({ data = Types }) => {
             onChange={o => setAction(o)}
           />
           <br />
-          {action && <Solution data={action} />}
+          {action &&
+            action.func &&
+            action.func.map((func, index) => {
+              return (
+                <Fragment>
+                  <Solution key={index} data={func} />
+                  <br />
+                </Fragment>
+              )
+            })}
         </Fragment>
       )}
     </Fragment>
