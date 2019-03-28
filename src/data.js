@@ -5,17 +5,14 @@ const Types = [
     func: [
       {
         name: 'map',
-        notation: 'Functor f => (a → b) → f a → f b',
-        description: 'Runs the function provided on each element on the List',
+        notation: 'Functor f => (a -> b) -> f a -> f b',
+        description:
+          "Takes a function and\na [functor](https://github.com/fantasyland/fantasy-land#functor),\napplies the function to each of the functor's values, and returns\na functor of the same shape.\n\nRamda provides suitable `map` implementations for `Array` and `Object`,\nso this function may be applied to `[1, 2, 3]` or `{x: 1, y: 2, z: 3}`.\n\nDispatches to the `map` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.\n\nAlso treats functions as functors and will compose them together.",
         resource: 'https://ramdajs.com/docs/#map',
         example: {
-          code: `
-          const double = x => x * 2;
-          R.map(double, [1, 2, 3]);
-        `,
-          output: `
-          [2, 4, 6]
-        `
+          code:
+            '\n          const double = x => x * 2;\n          R.map(double, [1, 2, 3]);\n        ',
+          output: '\n          [2, 4, 6]\n        '
         }
       }
     ]
@@ -26,8 +23,6 @@ const Types = [
     func: [
       {
         name: 'pick',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#pick'
       }
     ]
@@ -39,8 +34,6 @@ const Types = [
     func: [
       {
         name: 'addIndex',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#addIndex'
       }
     ]
@@ -51,8 +44,9 @@ const Types = [
     func: [
       {
         name: 'pluck',
-        notation: '',
-        description: '',
+        notation: 'Functor f => k -> f {k: v} -> f v',
+        description:
+          'Returns a new list by plucking the same named property off all objects in\nthe list supplied.\n\n`pluck` will work on\nany [functor](https://github.com/fantasyland/fantasy-land#functor) in\naddition to arrays, as it is equivalent to `R.map(R.prop(k), f)`.',
         resource: 'https://ramdajs.com/docs/#pluck'
       }
     ]
@@ -63,8 +57,9 @@ const Types = [
     func: [
       {
         name: 'filter',
-        notation: '',
-        description: '',
+        notation: 'Filterable f => (a -> Boolean) -> f a -> f a',
+        description:
+          'Takes a predicate and a `Filterable`, and returns a new filterable of the\nsame type containing the members of the given filterable which satisfy the\ngiven predicate. Filterable objects include plain objects or any object\nthat has a filter method such as `Array`.\n\nDispatches to the `filter` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#filter'
       }
     ]
@@ -75,8 +70,9 @@ const Types = [
     func: [
       {
         name: 'slice',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> [a] -> [a]',
+        description:
+          'Returns the elements of the given list or string (or object with a `slice`\nmethod) from `fromIndex` (inclusive) to `toIndex` (exclusive).\n\nDispatches to the `slice` method of the third argument, if present.',
         resource: 'https://ramdajs.com/docs/#slice'
       }
     ]
@@ -87,8 +83,9 @@ const Types = [
     func: [
       {
         name: 'take',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> [a]',
+        description:
+          'Returns the first `n` elements of the given list, string, or\ntransducer/transformer (or object with a `take` method).\n\nDispatches to the `take` method of the second argument, if present.',
         resource: 'https://ramdajs.com/docs/#take'
       }
     ]
@@ -99,8 +96,9 @@ const Types = [
     func: [
       {
         name: 'takeWhile',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> [a]',
+        description:
+          'Returns a new list containing the first `n` elements of a given list,\npassing each value to the supplied predicate function, and terminating when\nthe predicate function returns `false`. Excludes the element that caused the\npredicate function to fail. The predicate function is passed one argument:\n*(value)*.\n\nDispatches to the `takeWhile` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#takeWhile'
       }
     ]
@@ -111,8 +109,9 @@ const Types = [
     func: [
       {
         name: 'takeLast',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> [a]',
+        description:
+          'Returns a new list containing the last `n` elements of the given list.\nIf `n > list.length`, returns a list of `list.length` elements.',
         resource: 'https://ramdajs.com/docs/#takeLast'
       }
     ]
@@ -123,8 +122,9 @@ const Types = [
     func: [
       {
         name: 'takeLastWhile',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> [a]',
+        description:
+          'Returns a new list containing the last `n` elements of a given list, passing\neach value to the supplied predicate function, and terminating when the\npredicate function returns `false`. Excludes the element that caused the\npredicate function to fail. The predicate function is passed one argument:\n*(value)*.',
         resource: 'https://ramdajs.com/docs/#takeLastWhile'
       }
     ]
@@ -135,8 +135,9 @@ const Types = [
     func: [
       {
         name: 'init',
-        notation: '',
-        description: '',
+        notation: '[a] -> [a]',
+        description:
+          'Returns all but the last element of the given list or string.',
         resource: 'https://ramdajs.com/docs/#init'
       }
     ]
@@ -147,8 +148,9 @@ const Types = [
     func: [
       {
         name: 'without',
-        notation: '',
-        description: '',
+        notation: '[a] -> [a] -> [a]',
+        description:
+          'Returns a new list without values in the first argument.\n[`R.equals`](#equals) is used to determine equality.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#without'
       }
     ]
@@ -159,8 +161,9 @@ const Types = [
     func: [
       {
         name: 'reject',
-        notation: '',
-        description: '',
+        notation: 'Filterable f => (a -> Boolean) -> f a -> f a',
+        description:
+          'The complement of [`filter`](#filter).\n\nActs as a transducer if a transformer is given in list position. Filterable\nobjects include plain objects or any object that has a filter method such\nas `Array`.',
         resource: 'https://ramdajs.com/docs/#reject'
       }
     ]
@@ -171,8 +174,9 @@ const Types = [
     func: [
       {
         name: 'uniq',
-        notation: '',
-        description: '',
+        notation: '[a] -> [a]',
+        description:
+          'Returns a new list containing only one copy of each element in the original\nlist. [`R.equals`](#equals) is used to determine equality.',
         resource: 'https://ramdajs.com/docs/#uniq'
       }
     ]
@@ -183,8 +187,9 @@ const Types = [
     func: [
       {
         name: 'uniqWith',
-        notation: '',
-        description: '',
+        notation: '((a, a) -> Boolean) -> [a] -> [a]',
+        description:
+          'Returns a new list containing only one copy of each element in the original\nlist, based upon the value returned by applying the supplied predicate to\ntwo list elements. Prefers the first item if two items compare equal based\non the predicate.',
         resource: 'https://ramdajs.com/docs/#uniqWith'
       }
     ]
@@ -195,8 +200,9 @@ const Types = [
     func: [
       {
         name: 'remove',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> [a] -> [a]',
+        description:
+          'Removes the sub-list of `list` starting at index `start` and containing\n`count` elements. _Note that this is not destructive_: it returns a copy of\nthe list with the changes.\n<small>No lists have been harmed in the application of this function.</small>',
         resource: 'https://ramdajs.com/docs/#remove'
       }
     ]
@@ -207,8 +213,9 @@ const Types = [
     func: [
       {
         name: 'drop',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> [a]',
+        description:
+          'Returns all but the first `n` elements of the given list, string, or\ntransducer/transformer (or object with a `drop` method).\n\nDispatches to the `drop` method of the second argument, if present.',
         resource: 'https://ramdajs.com/docs/#drop'
       }
     ]
@@ -219,8 +226,9 @@ const Types = [
     func: [
       {
         name: 'dropWhile',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> [a]',
+        description:
+          'Returns a new list excluding the leading elements of a given list which\nsatisfy the supplied predicate function. It passes each value to the supplied\npredicate function, skipping elements while the predicate function returns\n`true`. The predicate function is applied to one argument: *(value)*.\n\nDispatches to the `dropWhile` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#dropWhile'
       }
     ]
@@ -231,8 +239,9 @@ const Types = [
     func: [
       {
         name: 'dropLast',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> [a]',
+        description:
+          'Returns a list containing all but the last `n` elements of the given `list`.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#dropLast'
       }
     ]
@@ -243,8 +252,9 @@ const Types = [
     func: [
       {
         name: 'dropLastWhile',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> [a]',
+        description:
+          'Returns a new list excluding all the tailing elements of a given list which\nsatisfy the supplied predicate function. It passes each value from the right\nto the supplied predicate function, skipping elements until the predicate\nfunction returns a `falsy` value. The predicate function is applied to one argument:\n*(value)*.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#dropLastWhile'
       }
     ]
@@ -255,8 +265,6 @@ const Types = [
     func: [
       {
         name: 'sum',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#sum'
       }
     ]
@@ -267,8 +275,6 @@ const Types = [
     func: [
       {
         name: 'product',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#product'
       }
     ]
@@ -279,8 +285,6 @@ const Types = [
     func: [
       {
         name: 'mean',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#mean'
       }
     ]
@@ -291,8 +295,6 @@ const Types = [
     func: [
       {
         name: 'median',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#median'
       }
     ]
@@ -302,9 +304,10 @@ const Types = [
     action: 'compute based on custom logic and only output the final value',
     func: [
       {
-        name: 'reduce/reduce',
-        notation: '',
-        description: '',
+        name: 'reduce',
+        notation: '((a, b) -> a) -> a -> [b] -> a',
+        description:
+          "Returns a single item by iterating through the list, successively calling\nthe iterator function and passing it an accumulator value and the current\nvalue from the array, and then passing the result to the next call.\n\nThe iterator function receives two values: *(acc, value)*. It may use\n[`R.reduced`](#reduced) to shortcut the iteration.\n\nThe arguments' order of [`reduceRight`](#reduceRight)'s iterator function\nis *(value, acc)*.\n\nNote: `R.reduce` does not skip deleted or unassigned indices (sparse\narrays), unlike the native `Array.prototype.reduce` method. For more details\non this behavior, see:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Description\n\nDispatches to the `reduce` method of the third argument, if present. When\ndoing so, it is up to the user to handle the [`R.reduced`](#reduced)\nshortcuting, as this is not implemented by `reduce`.",
         resource: 'https://ramdajs.com/docs/#reduce',
         example: {
           code: '',
@@ -312,9 +315,10 @@ const Types = [
         }
       },
       {
-        name: 'reduce/reduceRight',
-        notation: '',
-        description: '',
+        name: 'reduceRight',
+        notation: '((a, b) -> b) -> b -> [a] -> b',
+        description:
+          "Returns a single item by iterating through the list, successively calling\nthe iterator function and passing it an accumulator value and the current\nvalue from the array, and then passing the result to the next call.\n\nSimilar to [`reduce`](#reduce), except moves through the input list from the\nright to the left.\n\nThe iterator function receives two values: *(value, acc)*, while the arguments'\norder of `reduce`'s iterator function is *(acc, value)*.\n\nNote: `R.reduceRight` does not skip deleted or unassigned indices (sparse\narrays), unlike the native `Array.prototype.reduceRight` method. For more details\non this behavior, see:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#Description",
         resource: 'https://ramdajs.com/docs/#reduceRight',
         example: {
           code: '',
@@ -330,8 +334,9 @@ const Types = [
     func: [
       {
         name: 'scan',
-        notation: '',
-        description: '',
+        notation: '((a, b) -> a) -> a -> [b] -> [a]',
+        description:
+          'Scan is similar to [`reduce`](#reduce), but returns a list of successively\nreduced values from the left',
         resource: 'https://ramdajs.com/docs/#scan'
       }
     ]
@@ -342,8 +347,9 @@ const Types = [
     func: [
       {
         name: 'head',
-        notation: '',
-        description: '',
+        notation: '[a] -> a | Undefined',
+        description:
+          'Returns the first element of the given list or string. In some libraries\nthis function is named `first`.',
         resource: 'https://ramdajs.com/docs/#head'
       }
     ]
@@ -354,8 +360,8 @@ const Types = [
     func: [
       {
         name: 'last',
-        notation: '',
-        description: '',
+        notation: '[a] -> a | Undefined',
+        description: 'Returns the last element of the given list or string.',
         resource: 'https://ramdajs.com/docs/#last'
       }
     ]
@@ -366,8 +372,9 @@ const Types = [
     func: [
       {
         name: 'nth',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> a | Undefined',
+        description:
+          'Returns the nth element of the given list or string. If n is negative the\nelement at index length + n is returned.',
         resource: 'https://ramdajs.com/docs/#nth'
       }
     ]
@@ -378,8 +385,9 @@ const Types = [
     func: [
       {
         name: 'find',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> a | undefined',
+        description:
+          'Returns the first element of the list which matches the predicate, or\n`undefined` if no element matches.\n\nDispatches to the `find` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#find'
       }
     ]
@@ -390,8 +398,9 @@ const Types = [
     func: [
       {
         name: 'findLast',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> a | undefined',
+        description:
+          'Returns the last element of the list which matches the predicate, or\n`undefined` if no element matches.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#findLast'
       }
     ]
@@ -402,8 +411,6 @@ const Types = [
     func: [
       {
         name: 'contains',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#contains'
       }
     ]
@@ -414,8 +421,9 @@ const Types = [
     func: [
       {
         name: 'indexOf',
-        notation: '',
-        description: '',
+        notation: 'a -> [a] -> Number',
+        description:
+          'Returns the position of the first occurrence of an item in an array, or -1\nif the item is not included in the array. [`R.equals`](#equals) is used to\ndetermine equality.',
         resource: 'https://ramdajs.com/docs/#indexOf'
       }
     ]
@@ -427,8 +435,9 @@ const Types = [
     func: [
       {
         name: 'findIndex',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> Number',
+        description:
+          'Returns the index of the first element of the list which matches the\npredicate, or `-1` if no element matches.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#findIndex'
       }
     ]
@@ -439,8 +448,9 @@ const Types = [
     func: [
       {
         name: 'lastIndexOf',
-        notation: '',
-        description: '',
+        notation: 'a -> [a] -> Number',
+        description:
+          'Returns the position of the last occurrence of an item in an array, or -1 if\nthe item is not included in the array. [`R.equals`](#equals) is used to\ndetermine equality.',
         resource: 'https://ramdajs.com/docs/#lastIndexOf'
       }
     ]
@@ -452,8 +462,9 @@ const Types = [
     func: [
       {
         name: 'findLastIndex',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> Number',
+        description:
+          'Returns the index of the last element of the list which matches the\npredicate, or `-1` if no element matches.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#findLastIndex'
       }
     ]
@@ -464,8 +475,9 @@ const Types = [
     func: [
       {
         name: 'all',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> Boolean',
+        description:
+          "Returns `true` if all elements of the list match the predicate, `false` if\nthere are any that don't.\n\nDispatches to the `all` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.",
         resource: 'https://ramdajs.com/docs/#all'
       }
     ]
@@ -476,8 +488,9 @@ const Types = [
     func: [
       {
         name: 'any',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> Boolean',
+        description:
+          'Returns `true` if at least one of the elements of the list match the predicate,\n`false` otherwise.\n\nDispatches to the `any` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#any'
       }
     ]
@@ -488,8 +501,9 @@ const Types = [
     func: [
       {
         name: 'none',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> Boolean',
+        description:
+          'Returns `true` if no elements of the list match the predicate, `false`\notherwise.\n\nDispatches to the `all` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#none'
       }
     ]
@@ -500,8 +514,9 @@ const Types = [
     func: [
       {
         name: 'update',
-        notation: '',
-        description: '',
+        notation: 'Number -> a -> [a] -> [a]',
+        description:
+          'Returns a new copy of the array with the element at the provided index\nreplaced with the given value.',
         resource: 'https://ramdajs.com/docs/#update'
       }
     ]
@@ -511,9 +526,14 @@ const Types = [
     action: 'replace a value at a specific index based on custom logic',
     func: [
       {
-        name: 'adjust/lensPath',
-        notation: '',
-        description: '',
+        name: 'adjust',
+        notation: 'Number -> (a -> a) -> [a] -> [a]',
+        description:
+          'Applies a function to the value at the given index of an array, returning a\nnew copy of the array with the element at the given index replaced with the\nresult of the function application.',
+        resource: 'https://ramdajs.com/docs/#adjust'
+      },
+      {
+        name: 'lensPath',
         resource: 'https://ramdajs.com/docs/#lensPath'
       }
     ]
@@ -524,8 +544,9 @@ const Types = [
     func: [
       {
         name: 'prepend',
-        notation: '',
-        description: '',
+        notation: 'a -> [a] -> [a]',
+        description:
+          'Returns a new list with the given element at the front, followed by the\ncontents of the list.',
         resource: 'https://ramdajs.com/docs/#prepend'
       }
     ]
@@ -536,8 +557,9 @@ const Types = [
     func: [
       {
         name: 'append',
-        notation: '',
-        description: '',
+        notation: 'a -> [a] -> [a]',
+        description:
+          'Returns a new list containing the contents of the given list, followed by\nthe given element.',
         resource: 'https://ramdajs.com/docs/#append'
       }
     ]
@@ -548,8 +570,9 @@ const Types = [
     func: [
       {
         name: 'insert',
-        notation: '',
-        description: '',
+        notation: 'Number -> a -> [a] -> [a]',
+        description:
+          'Inserts the supplied element into the list, at the specified `index`. _Note that\nthis is not destructive_: it returns a copy of the list with the changes.\n<small>No lists have been harmed in the application of this function.</small>',
         resource: 'https://ramdajs.com/docs/#insert'
       }
     ]
@@ -560,8 +583,9 @@ const Types = [
     func: [
       {
         name: 'insertAll',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> [a] -> [a]',
+        description:
+          'Inserts the sub-list into the list, at the specified `index`. _Note that this is not\ndestructive_: it returns a copy of the list with the changes.\n<small>No lists have been harmed in the application of this function.</small>',
         resource: 'https://ramdajs.com/docs/#insertAll'
       }
     ]
@@ -572,8 +596,9 @@ const Types = [
     func: [
       {
         name: 'groupBy',
-        notation: '',
-        description: '',
+        notation: '(a -> String) -> [a] -> {String: [a]}',
+        description:
+          'Splits a list into sub-lists stored in an object, based on the result of\ncalling a String-returning function on each element, and grouping the\nresults according to values returned.\n\nDispatches to the `groupBy` method of the second argument, if present.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#groupBy'
       }
     ]
@@ -584,8 +609,9 @@ const Types = [
     func: [
       {
         name: 'length',
-        notation: '',
-        description: '',
+        notation: '[a] -> Number',
+        description:
+          'Returns the number of elements in the array by returning `list.length`.',
         resource: 'https://ramdajs.com/docs/#length'
       }
     ]
@@ -596,8 +622,9 @@ const Types = [
     func: [
       {
         name: 'range',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> [Number]',
+        description:
+          'Returns a list of numbers from `from` (inclusive) to `to` (exclusive).',
         resource: 'https://ramdajs.com/docs/#range'
       }
     ]
@@ -608,8 +635,8 @@ const Types = [
     func: [
       {
         name: 'splitAt',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> [[a], [a]]',
+        description: 'Splits a given list or string at a given index.',
         resource: 'https://ramdajs.com/docs/#splitAt'
       }
     ]
@@ -620,8 +647,9 @@ const Types = [
     func: [
       {
         name: 'splitWhen',
-        notation: '',
-        description: '',
+        notation: '(a -> Boolean) -> [a] -> [[a], [a]]',
+        description:
+          'Takes a list and a predicate and returns a pair of lists with the following properties:\n\n - the result of concatenating the two output lists is equivalent to the input list;\n - none of the elements of the first output list satisfies the predicate; and\n - if the second output list is non-empty, its first element satisfies the predicate.',
         resource: 'https://ramdajs.com/docs/#splitWhen'
       }
     ]
@@ -632,8 +660,8 @@ const Types = [
     func: [
       {
         name: 'splitEvery',
-        notation: '',
-        description: '',
+        notation: 'Number -> [a] -> [[a]]',
+        description: 'Splits a collection into slices of the specified length.',
         resource: 'https://ramdajs.com/docs/#splitEvery'
       }
     ]
@@ -644,8 +672,9 @@ const Types = [
     func: [
       {
         name: 'reverse',
-        notation: '',
-        description: '',
+        notation: '[a] -> [a]',
+        description:
+          'Returns a new list or string with the elements or characters in reverse\norder.',
         resource: 'https://ramdajs.com/docs/#reverse'
       }
     ]
@@ -656,8 +685,9 @@ const Types = [
     func: [
       {
         name: 'sort',
-        notation: '',
-        description: '',
+        notation: '((a, a) -> Number) -> [a] -> [a]',
+        description:
+          "Returns a copy of the list, sorted according to the comparator function,\nwhich should accept two values at a time and return a negative number if the\nfirst value is smaller, a positive number if it's larger, and zero if they\nare equal. Please note that this is a **copy** of the list. It does not\nmodify the original.",
         resource: 'https://ramdajs.com/docs/#sort'
       }
     ]
@@ -668,8 +698,6 @@ const Types = [
     func: [
       {
         name: 'sortBy',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#sortBy'
       }
     ]
@@ -680,8 +708,9 @@ const Types = [
     func: [
       {
         name: 'concat',
-        notation: '',
-        description: '',
+        notation: '[a] -> [a] -> [a]',
+        description:
+          'Returns the result of concatenating the given lists or strings.\n\nNote: `R.concat` expects both arguments to be of the same type,\nunlike the native `Array.prototype.concat` method. It will throw\nan error if you `concat` an Array with a non-Array value.\n\nDispatches to the `concat` method of the first argument, if present.\nCan also concatenate two members of a [fantasy-land\ncompatible semigroup](https://github.com/fantasyland/fantasy-land#semigroup).',
         resource: 'https://ramdajs.com/docs/#concat'
       }
     ]
@@ -692,8 +721,6 @@ const Types = [
     func: [
       {
         name: 'intersection',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#intersection'
       }
     ]
@@ -704,8 +731,6 @@ const Types = [
     func: [
       {
         name: 'intersectionWith',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#intersectionWith'
       }
     ]
@@ -716,8 +741,6 @@ const Types = [
     func: [
       {
         name: 'difference',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#difference'
       }
     ]
@@ -729,8 +752,6 @@ const Types = [
     func: [
       {
         name: 'differenceWith',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#differenceWith'
       }
     ]
@@ -741,8 +762,6 @@ const Types = [
     func: [
       {
         name: 'union',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#union'
       }
     ]
@@ -754,8 +773,6 @@ const Types = [
     func: [
       {
         name: 'unionWith',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#unionWith'
       }
     ]
@@ -766,8 +783,9 @@ const Types = [
     func: [
       {
         name: 'zip',
-        notation: '',
-        description: '',
+        notation: '[a] -> [b] -> [[a,b]]',
+        description:
+          'Creates a new list out of the two supplied by pairing up equally-positioned\nitems from both lists. The returned list is truncated to the length of the\nshorter of the two input lists.\nNote: `zip` is equivalent to `zipWith(function(a, b) { return [a, b] })`.',
         resource: 'https://ramdajs.com/docs/#zip'
       }
     ]
@@ -778,8 +796,9 @@ const Types = [
     func: [
       {
         name: 'zipWith',
-        notation: '',
-        description: '',
+        notation: '((a, b) -> c) -> [a] -> [b] -> [c]',
+        description:
+          'Creates a new list out of the two supplied by applying the function to each\nequally-positioned pair in the lists. The returned list is truncated to the\nlength of the shorter of the two input lists.',
         resource: 'https://ramdajs.com/docs/#zipWith'
       }
     ]
@@ -790,8 +809,9 @@ const Types = [
     func: [
       {
         name: 'indexBy',
-        notation: '',
-        description: '',
+        notation: '(a -> String) -> [{k: v}] -> {k: {k: v}}',
+        description:
+          'Given a function that generates a key, turns a list of objects into an\nobject indexing the objects by the given key. Note that if multiple\nobjects generate the same value for the indexing key only the last value\nwill be included in the generated object.\n\nActs as a transducer if a transformer is given in list position.',
         resource: 'https://ramdajs.com/docs/#indexBy'
       }
     ]
@@ -803,759 +823,1135 @@ const Types = [
     func: [
       {
         name: 'partition',
-        notation: '',
-        description: '',
+        notation: 'Filterable f => (a -> Boolean) -> f a -> [f a, f a]',
+        description:
+          'Takes a predicate and a list or other `Filterable` object and returns the\npair of filterable objects of the same type of elements which do and do not\nsatisfy, the predicate, respectively. Filterable objects include plain objects or any object\nthat has a filter method such as `Array`.',
         resource: 'https://ramdajs.com/docs/#partition'
       }
     ]
   },
   {
     type: 'Object',
-    action: `change every value`,
-    func: [
-      { name: 'map', resouce: 'https://ramdajs.com/docs/#map' },
-      { name: 'mapObjIndexed', resouce: '#mapObjIndexed' }
-    ]
-  },
-  {
-    type: 'Object',
-    action: `select a specific key's value`,
-    func: [
-      { name: 'prop', resouce: 'https://ramdajs.com/docs/#prop' },
-      { name: 'path', resouce: 'https://ramdajs.com/docs/#path' }
-    ]
-  },
-  {
-    type: 'Object',
-    action: `select a specific key's value or return a default if it is not found`,
-    func: [{ name: 'propOr', resouce: '' }, { name: 'pathOr', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `select specific keys' values`,
-    func: [{ name: 'props', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `select specific keys`,
-    func: [{ name: 'pick', resouce: '' }, { name: 'pickAll', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `select keys based on custom logic`,
-    func: [{ name: 'filter', resouce: '' }, { name: 'pickBy', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `remove a specific key`,
-    func: [
-      { name: 'dissoc', resouce: '' },
-      { name: 'dissocPath', resouce: '' }
-    ]
-  },
-  {
-    type: 'Object',
-    action: `remove specific keys`,
-    func: [{ name: 'omit', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `remove specific keys based on custom logic`,
-    func: [{ name: 'reject', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `add a specific key and value`,
-    func: [{ name: 'assoc/assocPath', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `replace a specific value based on custom logic`,
-    func: [{ name: 'lens/lensProp/lensPath', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `replace specific values based on custom logic`,
-    func: [{ name: 'evolve', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `know if a specific key is present`,
-    func: [{ name: 'has/hasIn', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `know if a specific key has a specific value`,
-    func: [{ name: 'propEq/pathEq', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `know if a specific key's value satisfies a custom predicate`,
-    func: [{ name: 'propSatisfies/pathSatisfies', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `know if specific keys have specific values`,
-    func: [{ name: 'whereEq', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `know if specific keys' values satisfy custom predicates`,
-    func: [{ name: 'where', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `list all the keys`,
-    func: [{ name: 'keys/keysIn', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `list all the values`,
-    func: [{ name: 'values/valuesIn', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `convert to a list of pairs`,
-    func: [{ name: 'toPairs/toPairsIn', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `know if two objects share the same key and value`,
-    func: [{ name: 'eqProps', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `create an object with a single key and value`,
-    func: [{ name: 'objOf', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `create an object with multiple keys and values`,
-    func: [{ name: 'zipObj', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `clone an object`,
-    func: [{ name: 'clone', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `merge two objects into one object`,
-    func: [{ name: 'merge', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `merge two objects into one object based on custom duplicate key logic`,
-    func: [{ name: 'mergeWith', resouce: '' }]
-  },
-  {
-    type: 'Object',
-    action: `merge more than two objects into one object`,
-    func: [{ name: 'mergeAll', resouce: '' }]
-  },
-  {
-    type: 'Functions',
-    action: `combine functions`,
+    action: 'change every value',
     func: [
       {
-        name: 'compose/pipe',
-        notation: '',
-        description: '',
+        name: 'map',
+        resouce: 'https://ramdajs.com/docs/#map'
+      },
+      {
+        name: 'mapObjIndexed',
+        resouce: '#mapObjIndexed',
+        description:
+          'An Object-specific version of [`map`](#map). The function is applied to three\narguments: *(value, key, obj)*. If only the value is significant, use\n[`map`](#map) instead.',
+        notation: '((*, String, Object) -> *) -> Object -> Object'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: "select a specific key's value",
+    func: [
+      {
+        name: 'prop',
+        resouce: 'https://ramdajs.com/docs/#prop',
+        description:
+          'Returns a function that when supplied an object returns the indicated\nproperty of that object, if it exists.',
+        notation: 's -> {s: a} -> a | Undefined'
+      },
+      {
+        name: 'path',
+        resouce: 'https://ramdajs.com/docs/#path',
+        description: 'Retrieve the value at a given path.',
+        notation: '[Idx] -> {a} -> a | Undefined'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action:
+      "select a specific key's value or return a default if it is not found",
+    func: [
+      {
+        name: 'propOr',
+        resouce: '',
+        description:
+          'If the given, non-null object has an own property with the specified name,\nreturns the value of that property. Otherwise returns the provided default\nvalue.',
+        notation: 'a -> String -> Object -> a'
+      },
+      {
+        name: 'pathOr',
+        resouce: '',
+        description:
+          'If the given, non-null object has a value at the given path, returns the\nvalue at that path. Otherwise returns the provided default value.',
+        notation: 'a -> [Idx] -> {a} -> a'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: "select specific keys' values",
+    func: [
+      {
+        name: 'props',
+        resouce: '',
+        description:
+          'Acts as multiple `prop`: array of keys in, array of values out. Preserves\norder.',
+        notation: '[k] -> {k: v} -> [v]'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'select specific keys',
+    func: [
+      {
+        name: 'pick',
+        resouce: '',
+        description:
+          'Returns a partial copy of an object containing only the keys specified. If\nthe key does not exist, the property is ignored.',
+        notation: '[k] -> {k: v} -> {k: v}'
+      },
+      {
+        name: 'pickAll',
+        resouce: '',
+        description:
+          "Similar to `pick` except that this one includes a `key: undefined` pair for\nproperties that don't exist.",
+        notation: '[k] -> {k: v} -> {k: v}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'select keys based on custom logic',
+    func: [
+      {
+        name: 'filter',
+        resouce: ''
+      },
+      {
+        name: 'pickBy',
+        resouce: '',
+        description:
+          'Returns a partial copy of an object containing only the keys that satisfy\nthe supplied predicate.',
+        notation: '((v, k) -> Boolean) -> {k: v} -> {k: v}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'remove a specific key',
+    func: [
+      {
+        name: 'dissoc',
+        resouce: '',
+        description:
+          'Returns a new object that does not contain a `prop` property.',
+        notation: 'String -> {k: v} -> {k: v}'
+      },
+      {
+        name: 'dissocPath',
+        resouce: '',
+        description:
+          'Makes a shallow clone of an object, omitting the property at the given path.\nNote that this copies and flattens prototype properties onto the new object\nas well. All non-primitive properties are copied by reference.',
+        notation: '[Idx] -> {k: v} -> {k: v}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'remove specific keys',
+    func: [
+      {
+        name: 'omit',
+        resouce: '',
+        description:
+          'Returns a partial copy of an object omitting the keys specified.',
+        notation: '[String] -> {String: *} -> {String: *}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'remove specific keys based on custom logic',
+    func: [
+      {
+        name: 'reject',
+        resouce: ''
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'add a specific key and value',
+    func: [
+      {
+        name: 'assoc',
+        resouce: '',
+        description:
+          'Makes a shallow clone of an object, setting or overriding the specified\nproperty with the given value. Note that this copies and flattens prototype\nproperties onto the new object as well. All non-primitive properties are\ncopied by reference.',
+        notation: 'String -> a -> {k: v} -> {k: v}'
+      },
+      {
+        name: 'assocPath',
+        resouce: '',
+        description:
+          'Makes a shallow clone of an object, setting or overriding the nodes required\nto create the given path, and placing the specific value at the tail end of\nthat path. Note that this copies and flattens prototype properties onto the\nnew object as well. All non-primitive properties are copied by reference.',
+        notation: '[Idx] -> a -> {a} -> {a}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'replace a specific value based on custom logic',
+    func: [
+      {
+        name: 'lens',
+        resouce: '',
+        description:
+          'Returns a lens for the given getter and setter functions. The getter "gets"\nthe value of the focus; the setter "sets" the value of the focus. The setter\nshould not mutate the data structure.',
+        notation: '(s -> a) -> ((a, s) -> s) -> Lens s a'
+      },
+      {
+        name: 'lensProp',
+        resouce: '',
+        description: 'Returns a lens whose focus is the specified property.',
+        notation: 'String -> Lens s a'
+      },
+      {
+        name: 'lensPath',
+        resouce: '',
+        description: 'Returns a lens whose focus is the specified path.',
+        notation: '[Idx] -> Lens s a'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'replace specific values based on custom logic',
+    func: [
+      {
+        name: 'evolve',
+        resouce: '',
+        description:
+          'Creates a new object by recursively evolving a shallow copy of `object`,\naccording to the `transformation` functions. All non-primitive properties\nare copied by reference.\n\nA `transformation` function will not be invoked if its corresponding key\ndoes not exist in the evolved object.',
+        notation: '{k: (v -> v)} -> {k: v} -> {k: v}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'know if a specific key is present',
+    func: [
+      {
+        name: 'has',
+        resouce: '',
+        description:
+          'Returns whether or not an object has an own property with the specified name',
+        notation: 's -> {s: x} -> Boolean'
+      },
+      {
+        name: 'hasIn',
+        resouce: '',
+        description:
+          'Returns whether or not an object or its prototype chain has a property with\nthe specified name',
+        notation: 's -> {s: x} -> Boolean'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'know if a specific key has a specific value',
+    func: [
+      {
+        name: 'propEq',
+        resouce: ''
+      },
+      {
+        name: 'pathEq',
+        resouce: ''
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: "know if a specific key's value satisfies a custom predicate",
+    func: [
+      {
+        name: 'propSatisfies',
+        resouce: ''
+      },
+      {
+        name: 'pathSatisfies',
+        resouce: ''
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'know if specific keys have specific values',
+    func: [
+      {
+        name: 'whereEq',
+        resouce: '',
+        description:
+          "Takes a spec object and a test object; returns true if the test satisfies\nthe spec, false otherwise. An object satisfies the spec if, for each of the\nspec's own properties, accessing that property of the object gives the same\nvalue (in [`R.equals`](#equals) terms) as accessing that property of the\nspec.\n\n`whereEq` is a specialization of [`where`](#where).",
+        notation: '{String: *} -> {String: *} -> Boolean'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: "know if specific keys' values satisfy custom predicates",
+    func: [
+      {
+        name: 'where',
+        resouce: '',
+        description:
+          "Takes a spec object and a test object; returns true if the test satisfies\nthe spec. Each of the spec's own properties must be a predicate function.\nEach predicate is applied to the value of the corresponding property of the\ntest object. `where` returns true if all the predicates return true, false\notherwise.\n\n`where` is well suited to declaratively expressing constraints for other\nfunctions such as [`filter`](#filter) and [`find`](#find).",
+        notation: '{String: (* -> Boolean)} -> {String: *} -> Boolean'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'list all the keys',
+    func: [
+      {
+        name: 'keys',
+        resouce: '',
+        description:
+          'Returns a list containing the names of all the enumerable own properties of\nthe supplied object.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.',
+        notation: '{k: v} -> [k]'
+      },
+      {
+        name: 'keysIn',
+        resouce: '',
+        description:
+          'Returns a list containing the names of all the properties of the supplied\nobject, including prototype properties.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.',
+        notation: '{k: v} -> [k]'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'list all the values',
+    func: [
+      {
+        name: 'values',
+        resouce: '',
+        description:
+          'Returns a list of all the enumerable own properties of the supplied object.\nNote that the order of the output array is not guaranteed across different\nJS platforms.',
+        notation: '{k: v} -> [v]'
+      },
+      {
+        name: 'valuesIn',
+        resouce: '',
+        description:
+          'Returns a list of all the properties, including prototype properties, of the\nsupplied object.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.',
+        notation: '{k: v} -> [v]'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'convert to a list of pairs',
+    func: [
+      {
+        name: 'toPairs',
+        resouce: '',
+        description:
+          "Converts an object into an array of key, value arrays. Only the object's\nown properties are used.\nNote that the order of the output array is not guaranteed to be consistent\nacross different JS platforms.",
+        notation: '{String: *} -> [[String,*]]'
+      },
+      {
+        name: 'toPairsIn',
+        resouce: '',
+        description:
+          "Converts an object into an array of key, value arrays. The object's own\nproperties and prototype properties are used. Note that the order of the\noutput array is not guaranteed to be consistent across different JS\nplatforms.",
+        notation: '{String: *} -> [[String,*]]'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'know if two objects share the same key and value',
+    func: [
+      {
+        name: 'eqProps',
+        resouce: '',
+        description:
+          'Reports whether two objects have the same value, in [`R.equals`](#equals)\nterms, for the specified property. Useful as a curried predicate.',
+        notation: 'k -> {k: v} -> {k: v} -> Boolean'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'create an object with a single key and value',
+    func: [
+      {
+        name: 'objOf',
+        resouce: '',
+        description: 'Creates an object containing a single key:value pair.',
+        notation: 'String -> a -> {String:a}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'create an object with multiple keys and values',
+    func: [
+      {
+        name: 'zipObj',
+        resouce: ''
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'clone an object',
+    func: [
+      {
+        name: 'clone',
+        resouce: '',
+        description:
+          'Creates a deep copy of the value which may contain (nested) `Array`s and\n`Object`s, `Number`s, `String`s, `Boolean`s and `Date`s. `Function`s are\nassigned by reference rather than copied\n\nDispatches to a `clone` method if present.',
+        notation: '{*} -> {*}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'merge two objects into one object',
+    func: [
+      {
+        name: 'merge',
+        resouce: '',
+        description:
+          'Create a new object with the own properties of the first object merged with\nthe own properties of the second object. If a key exists in both objects,\nthe value from the second object will be used.',
+        notation: '{k: v} -> {k: v} -> {k: v}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action:
+      'merge two objects into one object based on custom duplicate key logic',
+    func: [
+      {
+        name: 'mergeWith',
+        resouce: '',
+        description:
+          'Creates a new object with the own properties of the two provided objects. If\na key exists in both objects, the provided function is applied to the values\nassociated with the key in each object, with the result being used as the\nvalue associated with the key in the returned object.',
+        notation: '((a, a) -> a) -> {a} -> {a} -> {a}'
+      }
+    ]
+  },
+  {
+    type: 'Object',
+    action: 'merge more than two objects into one object',
+    func: [
+      {
+        name: 'mergeAll',
+        resouce: ''
+      }
+    ]
+  },
+  {
+    type: 'Function',
+    action: 'combine functions',
+    func: [
+      {
+        name: 'pipe',
+        notation:
+          '(((a, b, ..., n) -> o), (o -> p), ..., (x -> y), (y -> z)) -> ((a, b, ..., n) -> z)',
+        description:
+          'Performs left-to-right function composition. The leftmost function may have\nany arity; the remaining functions must be unary.\n\nIn some libraries this function is named `sequence`.\n\n**Note:** The result of pipe is not automatically curried.',
         resource: 'https://ramdajs.com/docs/#pipe'
+      },
+      {
+        name: 'compose',
+        notation:
+          '((y -> z), (x -> y), ..., (o -> p), ((a, b, ..., n) -> o)) -> ((a, b, ..., n) -> z)',
+        description:
+          'Performs right-to-left function composition. The rightmost function may have\nany arity; the remaining functions must be unary.\n\n**Note:** The result of compose is not automatically curried.',
+        resource: 'https://ramdajs.com/docs/#compose'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `combine promise returning functions`,
+    type: 'Function',
+    action: 'combine promise returning functions',
     func: [
       {
-        name: 'composeP/pipeP',
-        notation: '',
-        description: '',
+        name: 'pipeP',
+        notation:
+          '((a -> Promise b), (b -> Promise c), ..., (y -> Promise z)) -> (a -> Promise z)',
+        description:
+          'Performs left-to-right composition of one or more Promise-returning\nfunctions. The leftmost function may have any arity; the remaining functions\nmust be unary.',
         resource: 'https://ramdajs.com/docs/#pipeP'
+      },
+      {
+        name: 'composeP',
+        notation:
+          '((y -> Promise z), (x -> Promise y), ..., (a -> Promise b)) -> (a -> Promise z)',
+        description:
+          'Performs right-to-left composition of one or more Promise-returning\nfunctions. The rightmost function may have any arity; the remaining\nfunctions must be unary.',
+        resource: 'https://ramdajs.com/docs/#composeP'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `curry a function`,
+    type: 'Function',
+    action: 'curry a function',
     func: [
       {
         name: 'curry',
-        notation: '',
-        description: '',
+        notation: '(* -> a) -> (* -> a)',
+        description:
+          'Returns a curried equivalent of the provided function. The curried function\nhas two unusual capabilities. First, its arguments needn\'t be provided one\nat a time. If `f` is a ternary function and `g` is `R.curry(f)`, the\nfollowing are equivalent:\n\n  - `g(1)(2)(3)`\n  - `g(1)(2, 3)`\n  - `g(1, 2)(3)`\n  - `g(1, 2, 3)`\n\nSecondly, the special placeholder value [`R.__`](#__) may be used to specify\n"gaps", allowing partial application of any combination of arguments,\nregardless of their positions. If `g` is as above and `_` is [`R.__`](#__),\nthe following are equivalent:\n\n  - `g(1, 2, 3)`\n  - `g(_, 2, 3)(1)`\n  - `g(_, _, 3)(1)(2)`\n  - `g(_, _, 3)(1, 2)`\n  - `g(_, 2)(1)(3)`\n  - `g(_, 2)(1, 3)`\n  - `g(_, 2)(_, 3)(1)`',
         resource: 'https://ramdajs.com/docs/#curry'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `partially apply a function`,
+    type: 'Function',
+    action: 'partially apply a function',
     func: [
       {
-        name: 'partial/partialRight',
-        notation: '',
-        description: '',
+        name: 'partialRight',
+        notation:
+          '((a, b, c, ..., n) -> x) -> [d, e, f, ..., n] -> ((a, b, c, ...) -> x)',
+        description:
+          'Takes a function `f` and a list of arguments, and returns a function `g`.\nWhen applied, `g` returns the result of applying `f` to the arguments\nprovided to `g` followed by the arguments provided initially.',
         resource: 'https://ramdajs.com/docs/#partialRight'
+      },
+      {
+        name: 'partial',
+        notation:
+          '((a, b, c, ..., n) -> x) -> [a, b, c, ...] -> ((d, e, f, ..., n) -> x)',
+        description:
+          'Takes a function `f` and a list of arguments, and returns a function `g`.\nWhen applied, `g` returns the result of applying `f` to the arguments\nprovided initially followed by the arguments provided to `g`.',
+        resource: 'https://ramdajs.com/docs/#partial'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `uncurry a function`,
+    type: 'Function',
+    action: 'uncurry a function',
     func: [
       {
         name: 'uncurry',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#uncurry'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `swap the argument order`,
+    type: 'Function',
+    action: 'swap the argument order',
     func: [
       {
         name: 'flip',
-        notation: '',
-        description: '',
+        notation: '((a, b, c, ...) -> z) -> (b -> a -> c -> ... -> z)',
+        description:
+          "Returns a new function much like the supplied one, except that the first two\narguments' order is reversed.",
         resource: 'https://ramdajs.com/docs/#flip'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `apply a list of arguments`,
+    type: 'Function',
+    action: 'apply a list of arguments',
     func: [
       {
         name: 'apply',
-        notation: '',
-        description: '',
+        notation: '(*... -> a) -> [*] -> a',
+        description:
+          'Applies function `fn` to the argument list `args`. This is useful for\ncreating a fixed-arity function from a variadic function. `fn` should be a\nbound function if context is significant.',
         resource: 'https://ramdajs.com/docs/#apply'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `apply multiple functions to a single value and merge the results somehow`,
+    type: 'Function',
+    action:
+      'apply multiple functions to a single value and merge the results somehow',
     func: [
       {
         name: 'converge',
-        notation: '',
-        description: '',
+        notation:
+          '((x1, x2, ...) -> z) -> [((a, b, ...) -> x1), ((a, b, ...) -> x2), ...] -> (a -> b -> ... -> z)',
+        description:
+          'Accepts a converging function and a list of branching functions and returns\na new function. The arity of the new function is the same as the arity of\nthe longest branching function. When invoked, this new function is applied\nto some arguments, and each branching function is applied to those same\narguments. The results of each branching function are passed as arguments\nto the converging function to produce the return value.',
         resource: 'https://ramdajs.com/docs/#converge'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `transform a function's arguments`,
+    type: 'Function',
+    action: "transform a function's arguments",
     func: [
       {
         name: 'useWith',
-        notation: '',
-        description: '',
+        notation:
+          '((x1, x2, ...) -> z) -> [(a -> x1), (b -> x2), ...] -> (a -> b -> ... -> z)',
+        description:
+          "Accepts a function `fn` and a list of transformer functions and returns a\nnew curried function. When the new function is invoked, it calls the\nfunction `fn` with parameters consisting of the result of calling each\nsupplied handler on successive arguments to the new function.\n\nIf more arguments are passed to the returned function than transformer\nfunctions, those arguments are passed directly to `fn` as additional\nparameters. If you expect additional arguments that don't need to be\ntransformed, although you can ignore them, it's best to pass an identity\nfunction so that the new function reports the correct arity.",
         resource: 'https://ramdajs.com/docs/#useWith'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `apply a list of functions to each argument and collect the results`,
+    type: 'Function',
+    action:
+      'apply a list of functions to each argument and collect the results',
     func: [
       {
         name: 'juxt',
-        notation: '',
-        description: '',
+        notation: '[(a, b, ..., m) -> n] -> ((a, b, ..., m) -> [n])',
+        description: 'juxt applies a list of functions to a list of values.',
         resource: 'https://ramdajs.com/docs/#juxt'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `create a variadic function from one that takes an array`,
+    type: 'Function',
+    action: 'create a variadic function from one that takes an array',
     func: [
       {
         name: 'unapply',
-        notation: '',
-        description: '',
+        notation: '([*...] -> a) -> (*... -> a)',
+        description:
+          'Takes a function `fn`, which takes a single array argument, and returns a\nfunction which:\n\n  - takes any number of positional arguments;\n  - passes these arguments to `fn` as an array; and\n  - returns the result.\n\nIn other words, `R.unapply` derives a variadic function from a function which\ntakes an array. `R.unapply` is the inverse of [`R.apply`](#apply).',
         resource: 'https://ramdajs.com/docs/#unapply'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `restrict the number of accepted arguments to 1`,
+    type: 'Function',
+    action: 'restrict the number of accepted arguments to 1',
     func: [
       {
         name: 'unary',
-        notation: '',
-        description: '',
+        notation: '(* -> b) -> (a -> b)',
+        description:
+          'Wraps a function of any arity (including nullary) in a function that accepts\nexactly 1 parameter. Any extraneous parameters will not be passed to the\nsupplied function.',
         resource: 'https://ramdajs.com/docs/#unary'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `restrict the number of accepted arguments to 2`,
+    type: 'Function',
+    action: 'restrict the number of accepted arguments to 2',
     func: [
       {
         name: 'binary',
-        notation: '',
-        description: '',
+        notation: '(* -> c) -> (a, b -> c)',
+        description:
+          'Wraps a function of any arity (including nullary) in a function that accepts\nexactly 2 parameters. Any extraneous parameters will not be passed to the\nsupplied function.',
         resource: 'https://ramdajs.com/docs/#binary'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `restrict the number of accepted arguments to specific number`,
+    type: 'Function',
+    action: 'restrict the number of accepted arguments to specific number',
     func: [
       {
         name: 'nAry',
-        notation: '',
-        description: '',
+        notation: 'Number -> (* -> a) -> (* -> a)',
+        description:
+          'Wraps a function of any arity (including nullary) in a function that accepts\nexactly `n` parameters. Any extraneous parameters will not be passed to the\nsupplied function.',
         resource: 'https://ramdajs.com/docs/#nAry'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `return the supplied argument unchanged`,
+    type: 'Function',
+    action: 'return the supplied argument unchanged',
     func: [
       {
         name: 'identity',
-        notation: '',
-        description: '',
+        notation: 'a -> a',
+        description:
+          'A function that does nothing but return the parameter supplied to it. Good\nas a default or placeholder function.',
         resource: 'https://ramdajs.com/docs/#identity'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `turn a method into a function`,
+    type: 'Function',
+    action: 'turn a method into a function',
     func: [
       {
         name: 'invoker',
-        notation: '',
-        description: '',
+        notation: 'Number -> String -> (a -> b -> ... -> n -> Object -> *)',
+        description:
+          'Turns a named method with a specified arity into a function that can be\ncalled directly supplied with arguments and a target object.\n\nThe returned function is curried and accepts `arity + 1` parameters where\nthe final parameter is the target object.',
         resource: 'https://ramdajs.com/docs/#invoker'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `invoke a function only once`,
+    type: 'Function',
+    action: 'invoke a function only once',
     func: [
       {
         name: 'once',
-        notation: '',
-        description: '',
+        notation: '(a... -> b) -> (a... -> b)',
+        description:
+          'Accepts a function `fn` and returns a function that guards invocation of\n`fn` such that `fn` can only ever be called once, no matter how many times\nthe returned function is invoked. The first value calculated is returned in\nsubsequent invocations.',
         resource: 'https://ramdajs.com/docs/#once'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `inspect values without affecting them`,
+    type: 'Function',
+    action: 'inspect values without affecting them',
     func: [
       {
         name: 'tap',
-        notation: '',
-        description: '',
+        notation: '(a -> *) -> a -> a',
+        description:
+          'Runs the given function with the supplied object, then returns the object.\n\nActs as a transducer if a transformer is given as second parameter.',
         resource: 'https://ramdajs.com/docs/#tap'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `bind to a specific context`,
+    type: 'Function',
+    action: 'bind to a specific context',
     func: [
       {
         name: 'bind',
-        notation: '',
-        description: '',
+        notation: '(* -> *) -> {*} -> (* -> *)',
+        description:
+          'Creates a function that is bound to a context.\nNote: `R.bind` does not provide the additional argument-binding capabilities of\n[Function.prototype.bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).',
         resource: 'https://ramdajs.com/docs/#bind'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `lift a function`,
+    type: 'Function',
+    action: 'lift a function',
     func: [
       {
-        name: 'lift/liftN',
-        notation: '',
-        description: '',
+        name: 'liftN',
+        notation: 'Number -> (*... -> *) -> ([*]... -> [*])',
+        description:
+          '"lifts" a function to be the specified arity, so that it may "map over" that\nmany lists, Functions or other objects that satisfy the [FantasyLand Apply spec](https://github.com/fantasyland/fantasy-land#apply).',
         resource: 'https://ramdajs.com/docs/#liftN'
+      },
+      {
+        name: 'lift',
+        notation: '(*... -> *) -> ([*]... -> [*])',
+        description:
+          '"lifts" a function of arity > 1 so that it may "map over" a list, Function or other\nobject that satisfies the [FantasyLand Apply spec](https://github.com/fantasyland/fantasy-land#apply).',
+        resource: 'https://ramdajs.com/docs/#lift'
       }
     ]
   },
   {
-    type: 'Functions',
-    action: `memoize`,
+    type: 'Function',
+    action: 'memoize',
     func: [
       {
         name: 'memoize',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#memoize'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `apply a function based on conditional logic`,
+    action: 'apply a function based on conditional logic',
     func: [
       {
-        name: 'ifElse / cond / unless / when',
-        notation: '',
-        description: '',
+        name: 'ifElse',
+        notation:
+          '(*... -> Boolean) -> (*... -> *) -> (*... -> *) -> (*... -> *)',
+        description:
+          'Creates a function that will process either the `onTrue` or the `onFalse`\nfunction depending upon the result of the `condition` predicate.',
+        resource: 'https://ramdajs.com/docs/#ifElse'
+      },
+      {
+        name: 'cond',
+        notation: '[[(*... -> Boolean),(*... -> *)]] -> (*... -> *)',
+        description:
+          'Returns a function, `fn`, which encapsulates `if/else, if/else, ...` logic.\n`R.cond` takes a list of [predicate, transformer] pairs. All of the arguments\nto `fn` are applied to each of the predicates in turn until one returns a\n"truthy" value, at which point `fn` returns the result of applying its\narguments to the corresponding transformer. If none of the predicates\nmatches, `fn` returns undefined.',
+        resource: 'https://ramdajs.com/docs/#cond'
+      },
+      {
+        name: 'unless',
+        notation: '(a -> Boolean) -> (a -> a) -> a -> a',
+        description:
+          'Tests the final argument by passing it to the given predicate function. If\nthe predicate is not satisfied, the function will return the result of\ncalling the `whenFalseFn` function with the same argument. If the predicate\nis satisfied, the argument is returned as is.',
+        resource: 'https://ramdajs.com/docs/#unless'
+      },
+      {
+        name: 'when',
+        notation: '(a -> Boolean) -> (a -> a) -> a -> a',
+        description:
+          'Tests the final argument by passing it to the given predicate function. If\nthe predicate is satisfied, the function will return the result of calling\nthe `whenTrueFn` function with the same argument. If the predicate is not\nsatisfied, the argument is returned as is.',
         resource: 'https://ramdajs.com/docs/#when'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `negate a value`,
+    action: 'negate a value',
     func: [
       {
         name: 'not',
-        notation: '',
-        description: '',
+        notation: '* -> Boolean',
+        description:
+          'A function that returns the `!` of its argument. It will return `true` when\npassed false-y value, and `false` when passed a truth-y one.',
         resource: 'https://ramdajs.com/docs/#not'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `know if either of two values are truthy`,
+    action: 'know if either of two values are truthy',
     func: [
       {
         name: 'or',
-        notation: '',
-        description: '',
+        notation: 'a -> b -> a | b',
+        description:
+          'Returns `true` if one or both of its arguments are `true`. Returns `false`\nif both arguments are `false`.',
         resource: 'https://ramdajs.com/docs/#or'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `know if two values are truthy`,
+    action: 'know if two values are truthy',
     func: [
       {
         name: 'and',
-        notation: '',
-        description: '',
+        notation: 'a -> b -> a | b',
+        description:
+          'Returns `true` if both arguments are `true`; `false` otherwise.',
         resource: 'https://ramdajs.com/docs/#and'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `invert a predicate function`,
+    action: 'invert a predicate function',
     func: [
       {
         name: 'complement',
-        notation: '',
-        description: '',
+        notation: '(*... -> *) -> (*... -> Boolean)',
+        description:
+          'Takes a function `f` and returns a function `g` such that if called with the same arguments\nwhen `f` returns a "truthy" value, `g` returns `false` and when `f` returns a "falsy" value `g` returns `true`.\n\n`R.complement` may be applied to any functor',
         resource: 'https://ramdajs.com/docs/#complement'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `know if a value satisfies at least one of two predicates`,
+    action: 'know if a value satisfies at least one of two predicates',
     func: [
       {
         name: 'either',
-        notation: '',
-        description: '',
+        notation: '(*... -> Boolean) -> (*... -> Boolean) -> (*... -> Boolean)',
+        description:
+          'A function wrapping calls to the two functions in an `||` operation,\nreturning the result of the first function if it is truth-y and the result\nof the second function otherwise. Note that this is short-circuited,\nmeaning that the second function will not be invoked if the first returns a\ntruth-y value.\n\nIn addition to functions, `R.either` also accepts any fantasy-land compatible\napplicative functor.',
         resource: 'https://ramdajs.com/docs/#either'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `know if a value satisfies two predicates`,
+    action: 'know if a value satisfies two predicates',
     func: [
       {
         name: 'both',
-        notation: '',
-        description: '',
+        notation: '(*... -> Boolean) -> (*... -> Boolean) -> (*... -> Boolean)',
+        description:
+          'A function which calls the two provided functions and returns the `&&`\nof the results.\nIt returns the result of the first function if it is false-y and the result\nof the second function otherwise. Note that this is short-circuited,\nmeaning that the second function will not be invoked if the first returns a\nfalse-y value.\n\nIn addition to functions, `R.both` also accepts any fantasy-land compatible\napplicative functor.',
         resource: 'https://ramdajs.com/docs/#both'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `know if a value satisfies at least one of a list of predicates`,
+    action: 'know if a value satisfies at least one of a list of predicates',
     func: [
       {
         name: 'anyPass',
-        notation: '',
-        description: '',
+        notation: '[(*... -> Boolean)] -> (*... -> Boolean)',
+        description:
+          'Takes a list of predicates and returns a predicate that returns true for a\ngiven list of arguments if at least one of the provided predicates is\nsatisfied by those arguments.\n\nThe function returned is a curried function whose arity matches that of the\nhighest-arity predicate.',
         resource: 'https://ramdajs.com/docs/#anyPass'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `know if a value satisfies at every one of a list of predicates`,
+    action: 'know if a value satisfies at every one of a list of predicates',
     func: [
       {
         name: 'allPass',
-        notation: '',
-        description: '',
+        notation: '[(*... -> Boolean)] -> (*... -> Boolean)',
+        description:
+          'Takes a list of predicates and returns a predicate that returns true for a\ngiven list of arguments if every one of the provided predicates is satisfied\nby those arguments.\n\nThe function returned is a curried function whose arity matches that of the\nhighest-arity predicate.',
         resource: 'https://ramdajs.com/docs/#allPass'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `produce an empty value`,
+    action: 'produce an empty value',
     func: [
       {
         name: 'empty',
-        notation: '',
-        description: '',
         resource: 'https://ramdajs.com/docs/#empty'
       }
     ]
   },
   {
     type: 'Logic',
-    action: `know if a value is empty`,
+    action: 'know if a value is empty',
     func: [
       {
         name: 'isEmpty',
-        notation: '',
-        description: '',
+        notation: 'a -> Boolean',
+        description:
+          "Returns `true` if the given value is its type's empty value; `false`\notherwise.",
         resource: 'https://ramdajs.com/docs/#isEmpty'
       }
     ]
   },
-
   {
     type: 'Relation',
-    action: `compare for value equality`,
+    action: 'compare for value equality',
     func: [
       {
         name: 'equals',
-        notation: '',
-        description: '',
+        notation: 'a -> b -> Boolean',
+        description:
+          'Returns `true` if its arguments are equivalent, `false` otherwise. Handles\ncyclical data structures.\n\nDispatches symmetrically to the `equals` methods of both arguments, if\npresent.',
         resource: 'https://ramdajs.com/docs/#equals'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `compare for reference equality`,
+    action: 'compare for reference equality',
     func: [
       {
         name: 'identical',
-        notation: '',
-        description: '',
+        notation: 'a -> a -> Boolean',
+        description:
+          'Returns true if its arguments are identical, false otherwise. Values are\nidentical if they reference the same memory. `NaN` is identical to `NaN`;\n`0` and `-0` are not identical.\n\nNote this is merely a curried version of ES6 `Object.is`.',
         resource: 'https://ramdajs.com/docs/#identical'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `know if a value is less than another`,
+    action: 'know if a value is less than another',
     func: [
       {
         name: 'lt',
-        notation: '',
-        description: '',
+        notation: 'Ord a => a -> a -> Boolean',
+        description:
+          'Returns `true` if the first argument is less than the second; `false`\notherwise.',
         resource: 'https://ramdajs.com/docs/#lt'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `know if a value is less than or equal to another`,
+    action: 'know if a value is less than or equal to another',
     func: [
       {
         name: 'lte',
-        notation: '',
-        description: '',
+        notation: 'Ord a => a -> a -> Boolean',
+        description:
+          'Returns `true` if the first argument is less than or equal to the second;\n`false` otherwise.',
         resource: 'https://ramdajs.com/docs/#lte'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `know if a value is greater than another`,
+    action: 'know if a value is greater than another',
     func: [
       {
         name: 'gt',
-        notation: '',
-        description: '',
+        notation: 'Ord a => a -> a -> Boolean',
+        description:
+          'Returns `true` if the first argument is greater than the second; `false`\notherwise.',
         resource: 'https://ramdajs.com/docs/#gt'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `know if a value is greater than or equal to another`,
+    action: 'know if a value is greater than or equal to another',
     func: [
       {
         name: 'gte',
-        notation: '',
-        description: '',
+        notation: 'Ord a => a -> a -> Boolean',
+        description:
+          'Returns `true` if the first argument is greater than or equal to the second;\n`false` otherwise.',
         resource: 'https://ramdajs.com/docs/#gte'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `find the smallest of two values`,
+    action: 'find the smallest of two values',
     func: [
       {
         name: 'min',
-        notation: '',
-        description: '',
+        notation: 'Ord a => a -> a -> a',
+        description: 'Returns the smaller of its two arguments.',
         resource: 'https://ramdajs.com/docs/#min'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `find the smallest of two values based on custom logic`,
+    action: 'find the smallest of two values based on custom logic',
     func: [
       {
         name: 'minBy',
-        notation: '',
-        description: '',
+        notation: 'Ord b => (a -> b) -> a -> a -> a',
+        description:
+          'Takes a function and two values, and returns whichever value produces the\nsmaller result when passed to the provided function.',
         resource: 'https://ramdajs.com/docs/#minBy'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `find the largest of two values`,
+    action: 'find the largest of two values',
     func: [
       {
         name: 'max',
-        notation: '',
-        description: '',
+        notation: 'Ord a => a -> a -> a',
+        description: 'Returns the larger of its two arguments.',
         resource: 'https://ramdajs.com/docs/#max'
       }
     ]
   },
   {
     type: 'Relation',
-    action: `find the largest of two values based on custom logic`,
+    action: 'find the largest of two values based on custom logic',
     func: [
       {
         name: 'maxBy',
-        notation: '',
-        description: '',
+        notation: 'Ord b => (a -> b) -> a -> a -> a',
+        description:
+          'Takes a function and two values, and returns whichever value produces the\nlarger result when passed to the provided function.',
         resource: 'https://ramdajs.com/docs/#maxBy'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `increment a number by one`,
+    type: 'Math',
+    action: 'increment a number by one',
     func: [
       {
         name: 'inc',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number',
+        description: 'Increments its argument.',
         resource: 'https://ramdajs.com/docs/#inc'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `decrement a number by one`,
+    type: 'Math',
+    action: 'decrement a number by one',
     func: [
       {
         name: 'dec',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number',
+        description: 'Decrements its argument.',
         resource: 'https://ramdajs.com/docs/#dec'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `add two numbers`,
+    type: 'Math',
+    action: 'add two numbers',
     func: [
       {
         name: 'add',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> Number',
+        description: 'Adds two values.',
         resource: 'https://ramdajs.com/docs/#add'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `subtract one number from another`,
+    type: 'Math',
+    action: 'subtract one number from another',
     func: [
       {
         name: 'subtract',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> Number',
+        description: 'Subtracts its second argument from its first argument.',
         resource: 'https://ramdajs.com/docs/#subtract'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `multiple two numbers`,
+    type: 'Math',
+    action: 'multiple two numbers',
     func: [
       {
         name: 'multiply',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> Number',
+        description:
+          'Multiplies two numbers. Equivalent to `a * b` but curried.',
         resource: 'https://ramdajs.com/docs/#multiply'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `divide one number by another`,
+    type: 'Math',
+    action: 'divide one number by another',
     func: [
       {
         name: 'divide',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> Number',
+        description: 'Divides two numbers. Equivalent to `a / b`.',
         resource: 'https://ramdajs.com/docs/#divide'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `negate a number`,
+    type: 'Math',
+    action: 'negate a number',
     func: [
       {
         name: 'negate',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number',
+        description: 'Negates its argument.',
         resource: 'https://ramdajs.com/docs/#negate'
       }
     ]
   },
   {
-    type: 'Maths',
-    action: `divide one number by another and get the remainder`,
+    type: 'Math',
+    action: 'divide one number by another and get the remainder',
     func: [
       {
         name: 'modulo',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> Number',
+        description:
+          'Divides the first parameter by the second and returns the remainder. Note\nthat this function preserves the JavaScript-style behavior for modulo. For\nmathematical modulo see [`mathMod`](#mathMod).',
         resource: 'https://ramdajs.com/docs/#modulo'
       },
       {
         name: 'mathMod',
-        notation: '',
-        description: '',
+        notation: 'Number -> Number -> Number',
+        description:
+          '`mathMod` behaves like the modulo operator should mathematically, unlike the\n`%` operator (and by extension, [`R.modulo`](#modulo)). So while\n`-17 % 5` is `-2`, `mathMod(-17, 5)` is `3`. `mathMod` requires Integer\narguments, and returns NaN when the modulus is zero or negative.',
         resource: 'https://ramdajs.com/docs/#mathMod'
       }
     ]

@@ -47,6 +47,7 @@ const Solution = ({ data }) => {
             <Heading type='title3' element='h3'>
               {data.notation}
             </Heading>
+            <br />
             <Text>{data.description}</Text>
           </CardSectionContent>
         </CardSection>
@@ -97,8 +98,8 @@ const App = ({ data = Types }) => {
             action.func &&
             action.func.map((func, index) => {
               return (
-                <Fragment>
-                  <Solution key={index} data={func} />
+                <Fragment key={index}>
+                  <Solution data={func} />
                   <br />
                 </Fragment>
               )
