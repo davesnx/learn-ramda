@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import styled from '@emotion/styled'
 import Select from 'react-select'
-import Heading from '@kiwicom/orbit-components/lib/Heading'
 import Button from '@kiwicom/orbit-components/lib/Button'
 import ShareIcon from '@kiwicom/orbit-components/lib/icons/ShareIos'
 import copy from 'copy-to-clipboard'
@@ -11,21 +10,39 @@ import colors from './colors.js'
 import Solutions from './Solutions.jsx'
 
 const Header = styled.header`
+  margin: 15vh 8vw 15vh;  
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 30vh;
-  max-height: 120px;
-
-  background-color: ${colors.white};
+  font-size: 32px;
+  line-height: 1.25;
 `
 
 const Content = styled.main`
   padding: 50px;
-  overflow-y: scroll;
-  background-color: ${colors.black};
+  background-color: #ededed;
 `
+
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    color: state.isSelected ? 'red' : 'blue',
+  }),
+  control: (provided) => ({
+    // none of react-select's styles are passed to <Control />
+    ...provided,
+    width: 200,
+    marginLeft: 20,
+    marginRight: 20,
+  }),
+  singleValue: (provided, state) => {
+    const opacity = state.isDisabled ? 0.5 : 1;
+    const transition = 'opacity 300ms';
+
+    return { ...provided, opacity, transition };
+  }
+}
 
 const App = props => {
   const {
@@ -53,11 +70,10 @@ const App = props => {
   return (
     <Fragment>
     <Header>
-      <Heading type='title2' element='p'>
-        I have a
-      </Heading>
+      I have a
       <Select
         openMenuOnFocus
+        styles={customStyles}
         isOptionSelected={option => option === type}
         autoFocus={!typeSelected}
         placeholder='Select type'
@@ -71,10 +87,9 @@ const App = props => {
       />
       {typeSelected && (
         <Fragment>
-          <Heading type='title2' element='p'>
-            I would like to
-          </Heading>
+          I would like to
           <Select
+            styles={customStyles}
             autoFocus={typeSelected && !actionSelected}
             isOptionSelected={option => option === action}
             placeholder='Select an action'

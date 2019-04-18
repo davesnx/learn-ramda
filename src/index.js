@@ -6,19 +6,19 @@ import data from './data'
 import { Global, css } from '@emotion/core'
 import colors from './colors.js'
 
-const normalize = css`
-  html, body {
-    margin: 0;
-    padding: 0;
-    background-color: ${colors.black};
-  }
 
-  body {
-    overflow: hidden;
-  }
+
+const normalize = css`
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600');
 
   * {
     box-sizing: border-box;
+  }
+
+  html, body {
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    padding: 0;
   }
 `
 
