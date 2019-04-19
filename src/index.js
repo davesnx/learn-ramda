@@ -13,12 +13,24 @@ const normalize = css`
 
   * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html, body {
     font-family: 'IBM Plex Mono', monospace;
     margin: 0;
     padding: 0;
+    font-size: 18px;
+    line-height: 1.7;
+    color: ${colors.black};
+  }
+
+  a{
+    color: ${colors.blue};
+    transition: 0.2s;
+
+    &:hover { color: ${colors.black}; }
   }
 `
 
