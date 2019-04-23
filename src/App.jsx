@@ -1,31 +1,75 @@
 import React, { Fragment, useState } from 'react'
 import styled from '@emotion/styled'
+import { keyframes } from 'emotion'
 import Select from 'react-select'
-import Heading from '@kiwicom/orbit-components/lib/Heading'
-import Button from '@kiwicom/orbit-components/lib/Button'
-import ShareIcon from '@kiwicom/orbit-components/lib/icons/ShareIos'
-import copy from 'copy-to-clipboard'
 import * as R from 'ramda'
 
 import colors from './colors.js'
 import Solutions from './Solutions.jsx'
 
-const Header = styled.header`
+const fadeUp = keyframes`
+  0%  {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`
+
+const Header = styled.div`
+  padding: 8vh 8vw 12vh;  
+`
+
+const SelectWrapper = styled.div`
+  min-width: 200px;
+  margin: 0 20px;
+`
+
+const SelectWrapperBig = styled.div`
+  flex: 1;
+  min-width: 320px;
+  margin-left: 20px;
+`
+
+const Sentence = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 30vh;
-  max-height: 120px;
-
-  background-color: ${colors.white};
+  font-size: 24px;
+  line-height: 1.25;
 `
+
+const Description = styled.div`
+  opacity: 0.5;
+  font-size: 12px;
+  margin-bottom: 3vh;
+`
+
 
 const Content = styled.main`
-  padding: 50px;
-  overflow-y: scroll;
-  background-color: ${colors.black};
+  padding: 8vh 8vw 15vh;  
+  background-color: rgba(0,0,0,0.03);
+  animation: ${fadeUp} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
 `
+
+const customStyles = {
+  indicatorSeparator: () => ({
+    display: 'none'
+  })
+}
+
+const theme = (theme) => ({
+  ...theme,
+  colors: {
+    ...theme.colors,
+    primary: colors.black,
+    primary75: colors.grey,
+    primary50: colors.grey,
+    primary25: colors.grey
+  }
+})
 
 const App = props => {
   const {
@@ -52,55 +96,56 @@ const App = props => {
 
   return (
     <Fragment>
-    <Header>
-      <Heading type='title2' element='p'>
+    <Header>  
+      <Description>
+        Find the right method you need in Ramda
+      </Description>
+      <Sentence>
         I have a
-      </Heading>
-      <Select
-        openMenuOnFocus
-        isOptionSelected={option => option === type}
-        autoFocus={!typeSelected}
-        placeholder='Select type'
-        onChange={option => {
-          setAction({})
-          setType(option)
-          history.push('/' + option.label)
-        }}
-        options={typeOptions}
-        value={type}
-      />
-      {typeSelected && (
-        <Fragment>
-          <Heading type='title2' element='p'>
-            I would like to
-          </Heading>
+        <SelectWrapper>
           <Select
-            autoFocus={typeSelected && !actionSelected}
-            isOptionSelected={option => option === action}
-            placeholder='Select an action'
-            options={actionOptions}
+            openMenuOnFocus
+            styles={customStyles}
+            isOptionSelected={option => option === type}
+            autoFocus={!typeSelected}
+            placeholder='Select type'
             onChange={option => {
-              history.push('/' + params.type + '/' + option.label)
-              setAction(option)
+              setAction({})
+              setType(option)
+              history.push('/' + option.label)
             }}
-            value={action}
+            options={typeOptions}
+            value={type}
+            theme={theme}
           />
-          </Fragment>
-      )}
-      </Header>
-      <Content>
-        {optionAction && (
+        </SelectWrapper>          
+        {typeSelected && (
           <Fragment>
-          <Solutions data={optionAction} />
-          <Button
-            iconLeft={<ShareIcon />}
-            onClick={() => copy(window.location.href)}
-          >
-            Share
-          </Button>
+            I would like to
+            <SelectWrapperBig>
+              <Select
+                styles={customStyles}
+                autoFocus={typeSelected && !actionSelected}
+                isOptionSelected={option => option === action}
+                placeholder='Select an action'
+                options={actionOptions}
+                onChange={option => {
+                  history.push('/' + params.type + '/' + option.label)
+                  setAction(option)
+                }}
+                value={action}
+                theme={theme}
+              />
+            </SelectWrapperBig>
           </Fragment>
         )}
+      </Sentence>
+    </Header>
+    {optionAction && (
+      <Content>
+        <Solutions data={optionAction} />
       </Content>
+    )}
     </Fragment>
   )
 }

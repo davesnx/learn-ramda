@@ -1,6 +1,6 @@
 const Types = [
   {
-    type: 'List',
+    type: 'list',
     action: 'change every value',
     func: [
       {
@@ -18,7 +18,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'pull a property off each value',
     func: [
       {
@@ -28,7 +28,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action:
       'receive the index of each element along with the value when iterating over a list',
     func: [
@@ -39,7 +39,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'pull a property off each value',
     func: [
       {
@@ -52,7 +52,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'select values based on custom logic',
     func: [
       {
@@ -65,7 +65,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'select values from a specific index range',
     func: [
       {
@@ -78,7 +78,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'select values from the start',
     func: [
       {
@@ -91,7 +91,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'select values from the start based on custom logic',
     func: [
       {
@@ -104,7 +104,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'select values from the end',
     func: [
       {
@@ -117,7 +117,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'select values from the end based on custom logic',
     func: [
       {
@@ -130,7 +130,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove the last value',
     func: [
       {
@@ -143,7 +143,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove specific values',
     func: [
       {
@@ -156,7 +156,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove values based on custom logic',
     func: [
       {
@@ -169,7 +169,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'dedupe, remove all duplicates',
     func: [
       {
@@ -182,7 +182,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'dedupe, remove all duplicates based on custom logic',
     func: [
       {
@@ -195,7 +195,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove values based on index',
     func: [
       {
@@ -208,7 +208,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove values from the start',
     func: [
       {
@@ -221,7 +221,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove values from the start based on custom logic',
     func: [
       {
@@ -234,7 +234,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove values from the end',
     func: [
       {
@@ -247,7 +247,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'remove values from the end based on custom logic',
     func: [
       {
@@ -260,7 +260,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'compute the sum',
     func: [
       {
@@ -270,7 +270,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'compute the product',
     func: [
       {
@@ -280,7 +280,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'compute the average',
     func: [
       {
@@ -290,7 +290,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'compute the median',
     func: [
       {
@@ -300,7 +300,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'compute based on custom logic and only output the final value',
     func: [
       {
@@ -328,7 +328,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action:
       'compute based on custom logic and output the values as they are calculated',
     func: [
@@ -342,7 +342,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'take the first value',
     func: [
       {
@@ -355,7 +355,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'take the last value',
     func: [
       {
@@ -367,7 +367,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'take a value from a specific index',
     func: [
       {
@@ -380,7 +380,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'take the first occurrence of a value based on custom logic',
     func: [
       {
@@ -393,7 +393,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'take the last occurrence of a value based on custom logic',
     func: [
       {
@@ -406,7 +406,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'know if a specific value is present',
     func: [
       {
@@ -416,7 +416,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'know where the first occurrence of a value is',
     func: [
       {
@@ -429,7 +429,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action:
       'know where the first occurrence of a value is based on custom logic',
     func: [
@@ -443,7 +443,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'know where the last occurrence of a value is',
     func: [
       {
@@ -456,7 +456,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action:
       'know where the last occurrence of a value is based on custom logic',
     func: [
@@ -470,7 +470,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'know if a condition is satisfied by all of the values',
     func: [
       {
@@ -483,7 +483,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'know if a condition is satisfied by any of the values',
     func: [
       {
@@ -496,7 +496,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'know if a condition is satisfied by none of the values',
     func: [
       {
@@ -509,7 +509,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'replace a value at a specific index',
     func: [
       {
@@ -522,7 +522,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'replace a value at a specific index based on custom logic',
     func: [
       {
@@ -539,7 +539,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'add a value at the start',
     func: [
       {
@@ -552,7 +552,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'add a value at the end',
     func: [
       {
@@ -565,7 +565,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'add a value at a specific index',
     func: [
       {
@@ -578,7 +578,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'add multiple values at a specific index',
     func: [
       {
@@ -591,7 +591,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'group values based on custom logic',
     func: [
       {
@@ -604,7 +604,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'know how many values it contains',
     func: [
       {
@@ -617,7 +617,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'get a specific range of integer values',
     func: [
       {
@@ -630,7 +630,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'split at a specific index',
     func: [
       {
@@ -642,7 +642,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'split based on custom logic',
     func: [
       {
@@ -655,7 +655,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'split into chunks of a specific length',
     func: [
       {
@@ -667,7 +667,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'reverse',
     func: [
       {
@@ -680,7 +680,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'sort',
     func: [
       {
@@ -693,7 +693,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'sort based on custom logic',
     func: [
       {
@@ -703,7 +703,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'concatenate two lists',
     func: [
       {
@@ -716,7 +716,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'find the common values in two lists',
     func: [
       {
@@ -726,7 +726,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'find the common values in two lists based on custom logic',
     func: [
       {
@@ -736,7 +736,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'find the distinct values compared to another list',
     func: [
       {
@@ -746,7 +746,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action:
       'find the distinct values compared to another list based on custom logic',
     func: [
@@ -757,7 +757,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'combine two lists into a list of unique values',
     func: [
       {
@@ -767,7 +767,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action:
       'combine two lists into a list of unique values based on custom logic',
     func: [
@@ -778,7 +778,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'combine two lists into a list of pairs',
     func: [
       {
@@ -791,7 +791,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'combine two lists into a list of pairs based on custom logic',
     func: [
       {
@@ -804,7 +804,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action: 'convert list of objects into one object',
     func: [
       {
@@ -817,7 +817,7 @@ const Types = [
     ]
   },
   {
-    type: 'List',
+    type: 'list',
     action:
       'split a list into two sub lists based on a single predicate function',
     func: [
@@ -831,7 +831,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'change every value',
     func: [
       {
@@ -848,7 +848,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: "select a specific key's value",
     func: [
       {
@@ -867,7 +867,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action:
       "select a specific key's value or return a default if it is not found",
     func: [
@@ -888,7 +888,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: "select specific keys' values",
     func: [
       {
@@ -901,7 +901,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'select specific keys',
     func: [
       {
@@ -921,7 +921,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'select keys based on custom logic',
     func: [
       {
@@ -938,7 +938,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'remove a specific key',
     func: [
       {
@@ -958,7 +958,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'remove specific keys',
     func: [
       {
@@ -971,7 +971,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'remove specific keys based on custom logic',
     func: [
       {
@@ -981,7 +981,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'add a specific key and value',
     func: [
       {
@@ -1001,7 +1001,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'replace a specific value based on custom logic',
     func: [
       {
@@ -1026,7 +1026,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'replace specific values based on custom logic',
     func: [
       {
@@ -1039,7 +1039,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'know if a specific key is present',
     func: [
       {
@@ -1059,7 +1059,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'know if a specific key has a specific value',
     func: [
       {
@@ -1073,7 +1073,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: "know if a specific key's value satisfies a custom predicate",
     func: [
       {
@@ -1087,7 +1087,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'know if specific keys have specific values',
     func: [
       {
@@ -1100,7 +1100,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: "know if specific keys' values satisfy custom predicates",
     func: [
       {
@@ -1113,7 +1113,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'list all the keys',
     func: [
       {
@@ -1133,7 +1133,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'list all the values',
     func: [
       {
@@ -1153,7 +1153,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'convert to a list of pairs',
     func: [
       {
@@ -1173,7 +1173,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'know if two objects share the same key and value',
     func: [
       {
@@ -1186,7 +1186,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'create an object with a single key and value',
     func: [
       {
@@ -1198,7 +1198,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'create an object with multiple keys and values',
     func: [
       {
@@ -1208,7 +1208,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'clone an object',
     func: [
       {
@@ -1221,7 +1221,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'merge two objects into one object',
     func: [
       {
@@ -1234,7 +1234,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action:
       'merge two objects into one object based on custom duplicate key logic',
     func: [
@@ -1248,7 +1248,7 @@ const Types = [
     ]
   },
   {
-    type: 'Object',
+    type: 'object',
     action: 'merge more than two objects into one object',
     func: [
       {
@@ -1258,7 +1258,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'combine functions',
     func: [
       {
@@ -1280,7 +1280,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'combine promise returning functions',
     func: [
       {
@@ -1302,7 +1302,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'curry a function',
     func: [
       {
@@ -1315,7 +1315,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'partially apply a function',
     func: [
       {
@@ -1337,7 +1337,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'uncurry a function',
     func: [
       {
@@ -1347,7 +1347,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'swap the argument order',
     func: [
       {
@@ -1360,7 +1360,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'apply a list of arguments',
     func: [
       {
@@ -1373,7 +1373,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action:
       'apply multiple functions to a single value and merge the results somehow',
     func: [
@@ -1388,7 +1388,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: "transform a function's arguments",
     func: [
       {
@@ -1402,7 +1402,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action:
       'apply a list of functions to each argument and collect the results',
     func: [
@@ -1415,7 +1415,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'create a variadic function from one that takes an array',
     func: [
       {
@@ -1428,7 +1428,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'restrict the number of accepted arguments to 1',
     func: [
       {
@@ -1441,7 +1441,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'restrict the number of accepted arguments to 2',
     func: [
       {
@@ -1454,7 +1454,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'restrict the number of accepted arguments to specific number',
     func: [
       {
@@ -1467,7 +1467,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'return the supplied argument unchanged',
     func: [
       {
@@ -1480,7 +1480,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'turn a method into a function',
     func: [
       {
@@ -1493,7 +1493,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'invoke a function only once',
     func: [
       {
@@ -1506,7 +1506,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'inspect values without affecting them',
     func: [
       {
@@ -1519,7 +1519,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'bind to a specific context',
     func: [
       {
@@ -1532,7 +1532,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'lift a function',
     func: [
       {
@@ -1552,7 +1552,7 @@ const Types = [
     ]
   },
   {
-    type: 'Function',
+    type: 'function',
     action: 'memoize',
     func: [
       {
@@ -1562,7 +1562,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'apply a function based on conditional logic',
     func: [
       {
@@ -1597,7 +1597,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'negate a value',
     func: [
       {
@@ -1610,7 +1610,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'know if either of two values are truthy',
     func: [
       {
@@ -1623,7 +1623,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'know if two values are truthy',
     func: [
       {
@@ -1636,7 +1636,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'invert a predicate function',
     func: [
       {
@@ -1649,7 +1649,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'know if a value satisfies at least one of two predicates',
     func: [
       {
@@ -1662,7 +1662,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'know if a value satisfies two predicates',
     func: [
       {
@@ -1675,7 +1675,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'know if a value satisfies at least one of a list of predicates',
     func: [
       {
@@ -1688,7 +1688,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'know if a value satisfies at every one of a list of predicates',
     func: [
       {
@@ -1701,7 +1701,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'produce an empty value',
     func: [
       {
@@ -1711,7 +1711,7 @@ const Types = [
     ]
   },
   {
-    type: 'Logic',
+    type: 'logic',
     action: 'know if a value is empty',
     func: [
       {
@@ -1724,7 +1724,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'compare for value equality',
     func: [
       {
@@ -1737,7 +1737,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'compare for reference equality',
     func: [
       {
@@ -1750,7 +1750,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'know if a value is less than another',
     func: [
       {
@@ -1763,7 +1763,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'know if a value is less than or equal to another',
     func: [
       {
@@ -1776,7 +1776,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'know if a value is greater than another',
     func: [
       {
@@ -1789,7 +1789,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'know if a value is greater than or equal to another',
     func: [
       {
@@ -1802,7 +1802,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'find the smallest of two values',
     func: [
       {
@@ -1814,7 +1814,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'find the smallest of two values based on custom logic',
     func: [
       {
@@ -1827,7 +1827,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'find the largest of two values',
     func: [
       {
@@ -1839,7 +1839,7 @@ const Types = [
     ]
   },
   {
-    type: 'Relation',
+    type: 'relation',
     action: 'find the largest of two values based on custom logic',
     func: [
       {
@@ -1852,7 +1852,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'increment a number by one',
     func: [
       {
@@ -1864,7 +1864,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'decrement a number by one',
     func: [
       {
@@ -1876,7 +1876,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'add two numbers',
     func: [
       {
@@ -1888,7 +1888,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'subtract one number from another',
     func: [
       {
@@ -1900,7 +1900,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'multiple two numbers',
     func: [
       {
@@ -1913,7 +1913,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'divide one number by another',
     func: [
       {
@@ -1925,7 +1925,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'negate a number',
     func: [
       {
@@ -1937,7 +1937,7 @@ const Types = [
     ]
   },
   {
-    type: 'Math',
+    type: 'math',
     action: 'divide one number by another and get the remainder',
     func: [
       {
