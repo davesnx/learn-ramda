@@ -5,6 +5,7 @@ import Select from 'react-select'
 import * as R from 'ramda'
 
 import colors from './colors.js'
+import RamdaIcon from './icons/ramda.jsx'
 import Solutions from './Solutions.jsx'
 
 const fadeUp = keyframes`
@@ -42,7 +43,7 @@ const Sentence = styled.div`
 `
 
 const Description = styled.div`
-  opacity: 0.5;
+  opacity: 0.6;
   font-size: 12px;
   margin-bottom: 3vh;
 `
@@ -98,7 +99,7 @@ const App = props => {
     <Fragment>
     <Header>
       <Description>
-        Find the right method you need in Ramda
+        Find the right method you need in Ramda <RamdaIcon />
       </Description>
       <Sentence>
         I have a

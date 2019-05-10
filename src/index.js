@@ -35,13 +35,13 @@ const normalize = css`
 
 render(
   <Fragment>
-  <Global styles={normalize}/>
-  <BrowserRouter hashType='noslash'>
-    <Route
-      path='/:type?/:action?'
-      render={props => <App data={data} {...props} />}
-    />
-  </BrowserRouter>
+    <Global styles={normalize}/>
+    <BrowserRouter hashType='noslash' basename={process.env.PUBLIC_URL}>
+      <Route
+        path={'/:type?/:action?'}
+        render={props => <App data={data} {...props} />}
+      />
+    </BrowserRouter>
   </Fragment>,
   document.getElementById('root')
 )

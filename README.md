@@ -1,7 +1,5 @@
 # Learn ramda, the interactive way
 
-![](./docs/demo.gif)
-
 ## Why
 
 Ramda might be intimidating for newcomers, so I wanted to create a tool to help!

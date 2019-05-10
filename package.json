@@ -1,8 +1,9 @@
 {
   "name": "learn-ramda",
   "version": "0.0.0",
-  "description": "",
+  "description": "Learn ramda, the interactive way",
   "keywords": ["ramda", "learn", "fp"],
+  "homepage": "https://davesnx.github.io/learn-ramda/",
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
