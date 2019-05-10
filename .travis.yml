@@ -9,7 +9,8 @@ script:
   - yarn build
 
 deploy:
-  provider: pages
+  provider: script
+  script: yarn deploy
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
