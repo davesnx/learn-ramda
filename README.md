@@ -1,8 +1,12 @@
 # Learn ramda, the interactive way
 
-## Why
+When I was learning/using ramda I found really helpful [https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use](https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use) since the [Ramda documentation](http://ramdajs.com/docs/) were just a list of the methods and crazy examples.
 
-Ramda might be intimidating for newcomers, so I wanted to create a tool to help!
+So I decided to create a nice little UI to interactively find the method that works for you.
+
+Ramda might be intimidating for newcomers, since there are many concepts that are involved from Functional
+Programming. I would recommend to take a look at [hemanth/functional-programming-jargon](https://github.com/hemanth/functional-programming-jargon)
+
 
 ## Thanks
 
