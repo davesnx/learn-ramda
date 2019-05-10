@@ -9,14 +9,15 @@ Programming. I would recommend to take a look at [hemanth/functional-programming
 
 ## Thanks
 
-- Kudos to [Sarah Drasner](https://github.com/sdras) for inspire me with: https://sdras.github.io/array-explorer
-- Kudos to [Stefano Vozza](https://github.com/svozza) for creating all the documentation! https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use
+- Kudos to [Sarah Drasner (**@sdras**)](https://github.com/sdras) for inspire me with: https://sdras.github.io/array-explorer
+- Kudos to [Stefano Vozza (**@svozza**)](https://github.com/svozza) for creating all the documentation https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use
 
 ## I need some help
 
-I want to improve the example code snippets. Inside `/src/data.js` contains all the data related with the website. You will see that there are many "methods" that don't have any code.
+I want to improve the example code snippets. Right now, I got all of them from ramda jsdoc's source code, the same ones in [ramdajs.com/docs](https://ramdajs.com/docs).
 
-I would love that you [suggest](https://github.com/davesnx/learn-ramda/issues/new) some code examples for some methods that found you useful. And hopefully some day we could improve the official docs!
+Many times I don't find them useful, so I would love your help on improve it.
+Could [suggest](https://github.com/davesnx/learn-ramda/issues/new) some new code examples for some methods and hopefully some day we could improve the official docs!
 
 ## Want to run it locally?
 
