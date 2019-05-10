@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { render } from 'react-dom'
 import { Global, css } from '@emotion/core'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 
 import App from './App.jsx'
 import data from './data'
@@ -36,12 +36,12 @@ const normalize = css`
 render(
   <Fragment>
     <Global styles={normalize}/>
-    <BrowserRouter hashType='noslash' basename={process.env.PUBLIC_URL}>
+    <HashRouter hashType='noslash' basename={process.env.PUBLIC_URL}>
       <Route
         path={'/:type?/:action?'}
         render={props => <App data={data} {...props} />}
       />
-    </BrowserRouter>
+    </HashRouter>
   </Fragment>,
   document.getElementById('root')
 )
