@@ -5,6 +5,7 @@ import Select from 'react-select'
 import * as R from 'ramda'
 
 import colors from './colors.js'
+import { slug, unslug } from './lib/slug'
 import RamdaIcon from './icons/ramda.jsx'
 import Solutions from './Solutions.jsx'
 
@@ -48,10 +49,9 @@ const Description = styled.div`
   margin-bottom: 3vh;
 `
 
-
 const Content = styled.main`
   padding: 8vh 8vw 15vh;
-  background-color: rgba(0,0,0,0.03);
+  background-color: rgba(0, 0, 0, 0.03);
   animation: ${fadeUp} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
 `
 
@@ -84,7 +84,7 @@ const App = props => {
 
   const [type, setType] = useState({ label: params.type })
   const [action, setAction] = useState({
-    label: params.action
+    label: params.action && unslug(params.action)
   })
 
   const actionsByType = R.filter(R.propEq('type', type.label), data)
@@ -131,7 +131,7 @@ const App = props => {
                 placeholder='Select an action'
                 options={actionOptions}
                 onChange={option => {
-                  history.push('/' + params.type + '/' + option.label)
+                  history.push('/' + params.type + '/' + slug(option.label))
                   setAction(option)
                 }}
                 value={action}
