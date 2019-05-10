@@ -39,7 +39,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-plugin-emotion": "^10.0.9",
     "babel-plugin-ramda": "^2.0.0",
     "customize-cra": "^0.2.12",
     "gh-pages": "^2.0.1",

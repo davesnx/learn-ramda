@@ -22,8 +22,8 @@ export default [
     action: 'pull a property off each value',
     func: [
       {
-        name: 'pick',
-        resource: 'https://ramdajs.com/docs/#pick'
+        name: 'pluck',
+        resource: 'https://ramdajs.com/docs/#pluck'
       }
     ]
   },
