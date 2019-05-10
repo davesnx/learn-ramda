@@ -43,10 +43,28 @@ const Sentence = styled.div`
   line-height: 1.25;
 `
 
-const Description = styled.div`
+const Title = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3vh;
+`
+
+const Description = styled.p`
+  margin: 0;
   opacity: 0.6;
   font-size: 12px;
-  margin-bottom: 3vh;
+`
+
+const Version = styled.a`
+  margin: 0;
+  opacity: 0.6;
+  font-size: 12px;
+
+
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
 const Content = styled.main`
@@ -98,9 +116,14 @@ const App = props => {
   return (
     <Fragment>
     <Header>
-      <Description>
-        Find the right method you need in Ramda <RamdaIcon />
-      </Description>
+      <Title>
+        <Description>
+          Find the right method you need in Ramda <RamdaIcon />
+        </Description>
+        <Version target='_blank' rel='noopener noreferrer' href='https://github.com/ramda/ramda/releases/tag/0.26.0'>
+          ramda@0.26.0
+        </Version>
+      </Title>
       <Sentence>
         I have a
         <SelectWrapper>

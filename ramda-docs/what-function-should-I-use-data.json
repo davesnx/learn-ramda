@@ -595,10 +595,10 @@
     "action": "change every value",
     "func": [
       {
-        "name": "map"
+        "name": "mapObjIndexed"
       },
       {
-        "name": "mapObjIndexed"
+        "name": "map"
       }
     ]
   },
