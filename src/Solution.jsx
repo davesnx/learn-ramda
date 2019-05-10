@@ -1,20 +1,20 @@
-import React  from 'react'
+import React, { Suspense } from 'react'
 import styled from '@emotion/styled'
 import * as R from 'ramda'
 import { keyframes } from 'emotion'
-import ReactMarkdown from 'react-markdown'
 
 import colors from './colors'
 import Example from './Example.jsx'
+const LazyMarkdown = React.lazy(() => import('react-markdown'))
 
 const fadeUp = keyframes`
   0%  {
-    transform: translate3d(0,40px,0);
+    transform: translate3d(0, 40px, 0);
     opacity: 0;
   }
 
   100% {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 `
@@ -87,14 +87,15 @@ const SectionCode = styled.div`
 
 const Solution = ({ data }) => {
   return (
-      <Section>
-        <SectionContent>
-          <Title>{data.name}</Title>
-          <Link target='_blank' rel='noopener noreferrer' href={data.resource} >
-            {data.resource}
-          </Link>
-          {data.notation && <Notation>{data.notation}</Notation>}
-          <ReactMarkdown
+    <Section>
+      <SectionContent>
+        <Title>{data.name}</Title>
+        <Link target='_blank' rel='noopener noreferrer' href={data.resource} >
+          {data.resource}
+        </Link>
+        {data.notation && <Notation>{data.notation}</Notation>}
+        <Suspense fallback={<div>Loading...</div>}>
+          <LazyMarkdown
             renderers={{
               code: ({ children }) => <Script>{children}</Script>,
               inlineCode: ({ children }) => <Code>{children}</Code>,
@@ -102,10 +103,11 @@ const Solution = ({ data }) => {
             }}
             source={data.description}
           />
-        </SectionContent>
-        <SectionCode>
-          {R.hasPath(['example'], data) && <Example data={data.example} />}
-        </SectionCode>
+        </Suspense>
+      </SectionContent>
+      <SectionCode>
+        {R.hasPath(['example'], data) && <Example data={data.example} />}
+      </SectionCode>
     </Section>
   )
 }
