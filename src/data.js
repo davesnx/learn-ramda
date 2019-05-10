@@ -11,8 +11,8 @@ const Types = [
         resource: 'https://ramdajs.com/docs/#map',
         example: {
           code:
-            '\n          const double = x => x * 2;\n          R.map(double, [1, 2, 3]);\n        ',
-          output: '\n          [2, 4, 6]\n        '
+            '  const double = x => x * 2;\n  R.map(double, [1, 2, 3]);\n',
+          output: '\n  [2, 4, 6]\n'
         }
       }
     ]

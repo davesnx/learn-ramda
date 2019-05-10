@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React  from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from 'emotion'
 import ReactMarkdown from 'react-markdown'
@@ -36,7 +36,9 @@ const Script = styled.p`
 
 const Code = styled.code`
   background-color: ${colors.grey};
-  padding: 2px 2px;
+  padding: 2px 4px;
+  margin: 0 -2px;
+  border-radius: 2px;
 `
 
 const Strong = styled.strong`
@@ -57,12 +59,13 @@ const Link = styled.a`
 const Notation = styled.div`
   display: inline-block;
   padding: 6px 14px;
+  border-radius: 2px;
   background-color: ${colors.grey};
   margin-bottom: 24px;
 `
 
 const Section = styled.div`
-  display: flex; 
+  display: flex;
 `
 
 const SectionContent = styled.div`
@@ -73,7 +76,10 @@ const SectionContent = styled.div`
 
 const SectionCode = styled.div`
   flex: 1;
+
   & > pre {
+    padding: 12px 0;
+
     animation: ${scaleCenter} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
     transform-origin: center center;
   }
@@ -87,7 +93,7 @@ const Solution = ({ data }) => {
           <Link target='_blank' rel='noopener noreferrer' href={data.resource} >
             {data.resource}
           </Link>
-          {data.notation && <Notation>{data.notation}</Notation>}          
+          {data.notation && <Notation>{data.notation}</Notation>}
           <ReactMarkdown
             renderers={{
               code: ({ children }) => <Script>{children}</Script>,
