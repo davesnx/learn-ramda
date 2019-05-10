@@ -1,4 +1,4 @@
-const Types = [
+export default [
   {
     type: 'list',
     action: 'change every value',
@@ -1957,5 +1957,3 @@ const Types = [
     ]
   }
 ]
-
-export default Types

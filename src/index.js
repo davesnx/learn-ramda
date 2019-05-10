@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react'
 import { render } from 'react-dom'
-import App from './App.jsx'
-import { BrowserRouter, Route } from 'react-router-dom'
-import data from './data'
 import { Global, css } from '@emotion/core'
-import colors from './colors.js'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-
+import App from './App.jsx'
+import data from './data'
+import colors from './colors'
 
 const normalize = css`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600');

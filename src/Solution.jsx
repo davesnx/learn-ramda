@@ -1,10 +1,10 @@
 import React  from 'react'
 import styled from '@emotion/styled'
+import * as R from 'ramda'
 import { keyframes } from 'emotion'
 import ReactMarkdown from 'react-markdown'
-import colors from './colors.js'
-import * as R from 'ramda'
 
+import colors from './colors'
 import Example from './Example.jsx'
 
 const fadeUp = keyframes`
@@ -43,7 +43,7 @@ const Code = styled.code`
 
 const Strong = styled.strong`
   color: black;
-  font-width: bold;
+  font-weight: bold;
 `
 
 const Title = styled.h1`

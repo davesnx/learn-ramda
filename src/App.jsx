@@ -18,7 +18,7 @@ const fadeUp = keyframes`
 `
 
 const Header = styled.div`
-  padding: 8vh 8vw 12vh;  
+  padding: 8vh 8vw 12vh;
 `
 
 const SelectWrapper = styled.div`
@@ -49,7 +49,7 @@ const Description = styled.div`
 
 
 const Content = styled.main`
-  padding: 8vh 8vw 15vh;  
+  padding: 8vh 8vw 15vh;
   background-color: rgba(0,0,0,0.03);
   animation: ${fadeUp} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
 `
@@ -96,7 +96,7 @@ const App = props => {
 
   return (
     <Fragment>
-    <Header>  
+    <Header>
       <Description>
         Find the right method you need in Ramda
       </Description>
@@ -118,7 +118,7 @@ const App = props => {
             value={type}
             theme={theme}
           />
-        </SelectWrapper>          
+        </SelectWrapper>
         {typeSelected && (
           <Fragment>
             I would like to
