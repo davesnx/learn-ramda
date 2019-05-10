@@ -1,11 +1,11 @@
 {
-  "main.js": "/static/js/main.74aecef1.chunk.js",
-  "main.js.map": "/static/js/main.74aecef1.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.05610952.chunk.js": "/static/js/2.05610952.chunk.js",
-  "static/js/2.05610952.chunk.js.map": "/static/js/2.05610952.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.58c25a4471a4ce8b65d907fb50b65cee.js": "/precache-manifest.58c25a4471a4ce8b65d907fb50b65cee.js",
-  "service-worker.js": "/service-worker.js"
+  "main.js": "/learn-ramda/static/js/main.74aecef1.chunk.js",
+  "main.js.map": "/learn-ramda/static/js/main.74aecef1.chunk.js.map",
+  "runtime~main.js": "/learn-ramda/static/js/runtime~main.4eb475c2.js",
+  "runtime~main.js.map": "/learn-ramda/static/js/runtime~main.4eb475c2.js.map",
+  "static/js/2.05610952.chunk.js": "/learn-ramda/static/js/2.05610952.chunk.js",
+  "static/js/2.05610952.chunk.js.map": "/learn-ramda/static/js/2.05610952.chunk.js.map",
+  "index.html": "/learn-ramda/index.html",
+  "precache-manifest.d1bf0d0b04dbf68245e24cf1c668d863.js": "/learn-ramda/precache-manifest.d1bf0d0b04dbf68245e24cf1c668d863.js",
+  "service-worker.js": "/learn-ramda/service-worker.js"
 }
