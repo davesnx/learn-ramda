@@ -2,11 +2,16 @@
   "name": "learn-ramda",
   "version": "0.0.0",
   "description": "Learn ramda, the interactive way",
-  "keywords": ["ramda", "learn", "fp"],
-  "homepage": "https://davesnx.github.io/learn-ramda/",
+  "keywords": [
+    "ramda",
+    "learn",
+    "fp"
+  ],
+  "homepage": "https://davesnx.github.io/learn-ramda",
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
+    "history": "^4.9.0",
     "prism-react-renderer": "^0.1.6",
     "ramda": "^0.26.1",
     "react": "^16.8.5",

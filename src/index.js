@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { render } from 'react-dom'
 import { Global, css } from '@emotion/core'
 import { HashRouter, Route } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
 import App from './App.jsx'
 import data from './data'
@@ -25,18 +26,22 @@ const normalize = css`
     color: ${colors.black};
   }
 
-  a{
+  a {
     color: ${colors.blue};
     transition: 0.2s;
 
-    &:hover { color: ${colors.black}; }
+    &:hover {
+      color: ${colors.black};
+    }
   }
 `
+
+const history = createBrowserHistory()
 
 render(
   <Fragment>
     <Global styles={normalize}/>
-    <HashRouter hashType='noslash' basename={process.env.PUBLIC_URL}>
+    <HashRouter history={history} hashType='noslash'>
       <Route
         path={'/:type?/:action?'}
         render={props => <App data={data} {...props} />}
