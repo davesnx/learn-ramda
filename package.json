@@ -1,0 +1,48 @@
+{
+  "name": "learn-ramda",
+  "version": "0.0.0",
+  "description": "Learn ramda, the interactive way",
+  "keywords": [
+    "ramda",
+    "learn",
+    "fp"
+  ],
+  "homepage": "https://davesnx.github.io/learn-ramda",
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "history": "^4.9.0",
+    "prism-react-renderer": "^0.1.6",
+    "ramda": "^0.26.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-markdown": "^4.0.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "react-select": "^2.4.2",
+    "styled-components": "^4.2.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "babel-plugin-emotion": "^10.0.9",
+    "babel-plugin-ramda": "^2.0.0",
+    "customize-cra": "^0.2.12",
+    "gh-pages": "^2.0.1",
+    "react-app-rewired": "^2.1.3"
+  }
+}
