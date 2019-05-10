@@ -2,8 +2,7 @@ import React, { Fragment } from 'react'
 import styled from '@emotion/styled'
 import Solution from './Solution.jsx'
 
-const Root = styled.div`
-`
+const Root = styled.div``
 
 const Solutions = ({ data }) => {
   if (!data || !data.func) {

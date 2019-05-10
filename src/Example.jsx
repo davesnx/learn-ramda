@@ -6,7 +6,9 @@ import theme from 'prism-react-renderer/themes/nightOwl'
 const Pre = styled.pre`
   margin: 0;
   border-radius: 8px;
-  box-shadow: rgba(0,0,0,.8) 0px 20px 40px -25px, rgba(0,0,0,.1) 0 20px 40px 0;
+  box-shadow:
+    rgba(0, 0, 0, 0.8) 0px 20px 40px -25px,
+    rgba(0, 0, 0, 0.1) 0px 20px 40px   0px;
 `
 
 const Example = ({ data }) => {

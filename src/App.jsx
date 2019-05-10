@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Suspense, Fragment, useState } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from 'emotion'
 import Select from 'react-select'
@@ -143,9 +143,11 @@ const App = props => {
       </Sentence>
     </Header>
     {optionAction && (
+      <Suspense fallback={<div>Loading...</div>}>
       <Content>
         <Solutions data={optionAction} />
       </Content>
+      </Suspense>
     )}
     </Fragment>
   )
