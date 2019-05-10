@@ -1,0 +1,1355 @@
+[
+  {
+    "type": "list",
+    "action": "change every value",
+    "func": [
+      {
+        "name": "map"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "pull a property off each value",
+    "func": [
+      {
+        "name": "pick"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "receive the index of each element along with the value when iterating over a list",
+    "func": [
+      {
+        "name": "addIndex"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "pull a property off each value",
+    "func": [
+      {
+        "name": "pluck"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "select values based on custom logic",
+    "func": [
+      {
+        "name": "filter"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "select values from a specific index range",
+    "func": [
+      {
+        "name": "slice"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "select values from the start",
+    "func": [
+      {
+        "name": "take"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "select values from the start based on custom logic",
+    "func": [
+      {
+        "name": "takeWhile"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "select values from the end",
+    "func": [
+      {
+        "name": "takeLast"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "select values from the end based on custom logic",
+    "func": [
+      {
+        "name": "takeLastWhile"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove the last value",
+    "func": [
+      {
+        "name": "init"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove specific values",
+    "func": [
+      {
+        "name": "without"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove values based on custom logic",
+    "func": [
+      {
+        "name": "reject"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "dedupe, remove all duplicates",
+    "func": [
+      {
+        "name": "uniq"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "dedupe, remove all duplicates based on custom logic",
+    "func": [
+      {
+        "name": "uniqWith"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove values based on index",
+    "func": [
+      {
+        "name": "remove"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove values from the start",
+    "func": [
+      {
+        "name": "drop"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove values from the start based on custom logic",
+    "func": [
+      {
+        "name": "dropWhile"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove values from the end",
+    "func": [
+      {
+        "name": "dropLast"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "remove values from the end based on custom logic",
+    "func": [
+      {
+        "name": "dropLastWhile"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "compute the sum",
+    "func": [
+      {
+        "name": "sum"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "compute the product",
+    "func": [
+      {
+        "name": "product"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "compute the average",
+    "func": [
+      {
+        "name": "mean"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "compute the median",
+    "func": [
+      {
+        "name": "median"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "compute based on custom logic and only output the final value",
+    "func": [
+      {
+        "name": "reduce"
+      },
+      {
+        "name": "reduceRight"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "compute based on custom logic and output the values as they are calculated",
+    "func": [
+      {
+        "name": "scan"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "take the first value",
+    "func": [
+      {
+        "name": "head"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "take the last value",
+    "func": [
+      {
+        "name": "last"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "take a value from a specific index",
+    "func": [
+      {
+        "name": "nth"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "take the first occurrence of a value based on custom logic",
+    "func": [
+      {
+        "name": "find"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "take the last occurrence of a value based on custom logic",
+    "func": [
+      {
+        "name": "findLast"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know if a specific value is present",
+    "func": [
+      {
+        "name": "contains"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know where the first occurrence of a value is",
+    "func": [
+      {
+        "name": "indexOf"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know where the first occurrence of a value is based on custom logic",
+    "func": [
+      {
+        "name": "findIndex"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know where the last occurrence of a value is",
+    "func": [
+      {
+        "name": "lastIndexOf"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know where the last occurrence of a value is based on custom logic",
+    "func": [
+      {
+        "name": "findLastIndex"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know if a condition is satisfied by all of the values",
+    "func": [
+      {
+        "name": "all"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know if a condition is satisfied by any of the values",
+    "func": [
+      {
+        "name": "any"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know if a condition is satisfied by none of the values",
+    "func": [
+      {
+        "name": "none"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "replace a value at a specific index",
+    "func": [
+      {
+        "name": "update"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "replace a value at a specific index based on custom logic",
+    "func": [
+      {
+        "name": "adjust"
+      },
+      {
+        "name": "lensPath"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "add a value at the start",
+    "func": [
+      {
+        "name": "prepend"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "add a value at the end",
+    "func": [
+      {
+        "name": "append"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "add a value at a specific index",
+    "func": [
+      {
+        "name": "insert"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "add multiple values at a specific index",
+    "func": [
+      {
+        "name": "insertAll"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "group values based on custom logic",
+    "func": [
+      {
+        "name": "groupBy"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "know how many values it contains",
+    "func": [
+      {
+        "name": "length"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "get a specific range of integer values",
+    "func": [
+      {
+        "name": "range"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "split at a specific index",
+    "func": [
+      {
+        "name": "splitAt"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "split based on custom logic",
+    "func": [
+      {
+        "name": "splitWhen"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "split into chunks of a specific length",
+    "func": [
+      {
+        "name": "splitEvery"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "reverse",
+    "func": [
+      {
+        "name": "reverse"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "sort",
+    "func": [
+      {
+        "name": "sort"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "sort based on custom logic",
+    "func": [
+      {
+        "name": "sortBy"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "concatenate two lists",
+    "func": [
+      {
+        "name": "concat"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "find the common values in two lists",
+    "func": [
+      {
+        "name": "intersection"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "find the common values in two lists based on custom logic",
+    "func": [
+      {
+        "name": "intersectionWith"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "find the distinct values compared to another list",
+    "func": [
+      {
+        "name": "difference"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "find the distinct values compared to another list based on custom logic",
+    "func": [
+      {
+        "name": "differenceWith"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "combine two lists into a list of unique values",
+    "func": [
+      {
+        "name": "union"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "combine two lists into a list of unique values based on custom logic",
+    "func": [
+      {
+        "name": "unionWith"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "combine two lists into a list of pairs",
+    "func": [
+      {
+        "name": "zip"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "combine two lists into a list of pairs based on custom logic",
+    "func": [
+      {
+        "name": "zipWith"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "convert list of objects into one object",
+    "func": [
+      {
+        "name": "indexBy"
+      }
+    ]
+  },
+  {
+    "type": "list",
+    "action": "split a list into two sub lists based on a single predicate function",
+    "func": [
+      {
+        "name": "partition"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "change every value",
+    "func": [
+      {
+        "name": "map"
+      },
+      {
+        "name": "mapObjIndexed"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "select a specific key's value",
+    "func": [
+      {
+        "name": "prop"
+      },
+      {
+        "name": "path"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "select a specific key's value or return a default if it is not found",
+    "func": [
+      {
+        "name": "propOr"
+      },
+      {
+        "name": "pathOr"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "select specific keys' values",
+    "func": [
+      {
+        "name": "props"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "select specific keys",
+    "func": [
+      {
+        "name": "pick"
+      },
+      {
+        "name": "pickAll"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "select keys based on custom logic",
+    "func": [
+      {
+        "name": "filter"
+      },
+      {
+        "name": "pickBy"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "remove a specific key",
+    "func": [
+      {
+        "name": "dissoc"
+      },
+      {
+        "name": "dissocPath"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "remove specific keys",
+    "func": [
+      {
+        "name": "omit"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "remove specific keys based on custom logic",
+    "func": [
+      {
+        "name": "reject"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "add a specific key and value",
+    "func": [
+      {
+        "name": "assoc"
+      },
+      {
+        "name": "assocPath"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "replace a specific value based on custom logic",
+    "func": [
+      {
+        "name": "lens"
+      },
+      {
+        "name": "lensProp"
+      },
+      {
+        "name": "lensPath"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "replace specific values based on custom logic",
+    "func": [
+      {
+        "name": "evolve"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "know if a specific key is present",
+    "func": [
+      {
+        "name": "has"
+      },
+      {
+        "name": "hasIn"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "know if a specific key has a specific value",
+    "func": [
+      {
+        "name": "propEq"
+      },
+      {
+        "name": "pathEq"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "know if a specific key's value satisfies a custom predicate",
+    "func": [
+      {
+        "name": "propSatisfies"
+      },
+      {
+        "name": "pathSatisfies"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "know if specific keys have specific values",
+    "func": [
+      {
+        "name": "whereEq"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "know if specific keys' values satisfy custom predicates",
+    "func": [
+      {
+        "name": "where"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "list all the keys",
+    "func": [
+      {
+        "name": "keys"
+      },
+      {
+        "name": "keysIn"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "list all the values",
+    "func": [
+      {
+        "name": "values"
+      },
+      {
+        "name": "valuesIn"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "convert to a list of pairs",
+    "func": [
+      {
+        "name": "toPairs"
+      },
+      {
+        "name": "toPairsIn"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "know if two objects share the same key and value",
+    "func": [
+      {
+        "name": "eqProps"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "create an object with a single key and value",
+    "func": [
+      {
+        "name": "objOf"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "create an object with multiple keys and values",
+    "func": [
+      {
+        "name": "zipObj"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "clone an object",
+    "func": [
+      {
+        "name": "clone"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "merge two objects into one object",
+    "func": [
+      {
+        "name": "merge"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "merge two objects into one object based on custom duplicate key logic",
+    "func": [
+      {
+        "name": "mergeWith"
+      }
+    ]
+  },
+  {
+    "type": "object",
+    "action": "merge more than two objects into one object",
+    "func": [
+      {
+        "name": "mergeAll"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "combine functions",
+    "func": [
+      {
+        "name": "pipe"
+      },
+      {
+        "name": "compose"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "combine promise returning functions",
+    "func": [
+      {
+        "name": "pipeP"
+      },
+      {
+        "name": "composeP"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "curry a function",
+    "func": [
+      {
+        "name": "curry"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "partially apply a function",
+    "func": [
+      {
+        "name": "partialRight"
+      },
+      {
+        "name": "partial"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "uncurry a function",
+    "func": [
+      {
+        "name": "uncurry"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "swap the argument order",
+    "func": [
+      {
+        "name": "flip"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "apply a list of arguments",
+    "func": [
+      {
+        "name": "apply"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "apply multiple functions to a single value and merge the results somehow",
+    "func": [
+      {
+        "name": "converge"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "transform a function's arguments",
+    "func": [
+      {
+        "name": "useWith"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "apply a list of functions to each argument and collect the results",
+    "func": [
+      {
+        "name": "juxt"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "create a variadic function from one that takes an array",
+    "func": [
+      {
+        "name": "unapply"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "restrict the number of accepted arguments to 1",
+    "func": [
+      {
+        "name": "unary"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "restrict the number of accepted arguments to 2",
+    "func": [
+      {
+        "name": "binary"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "restrict the number of accepted arguments to specific number",
+    "func": [
+      {
+        "name": "nAry"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "return the supplied argument unchanged",
+    "func": [
+      {
+        "name": "identity"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "turn a method into a function",
+    "func": [
+      {
+        "name": "invoker"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "invoke a function only once",
+    "func": [
+      {
+        "name": "once"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "inspect values without affecting them",
+    "func": [
+      {
+        "name": "tap"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "bind to a specific context",
+    "func": [
+      {
+        "name": "bind"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "lift a function",
+    "func": [
+      {
+        "name": "liftN"
+      },
+      {
+        "name": "lift"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "action": "memoize",
+    "func": [
+      {
+        "name": "memoize"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "apply a function based on conditional logic",
+    "func": [
+      {
+        "name": "ifElse"
+      },
+      {
+        "name": "cond"
+      },
+      {
+        "name": "unless"
+      },
+      {
+        "name": "when"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "negate a value",
+    "func": [
+      {
+        "name": "not"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "know if either of two values are truthy",
+    "func": [
+      {
+        "name": "or"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "know if two values are truthy",
+    "func": [
+      {
+        "name": "and"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "invert a predicate function",
+    "func": [
+      {
+        "name": "complement"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "know if a value satisfies at least one of two predicates",
+    "func": [
+      {
+        "name": "either"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "know if a value satisfies two predicates",
+    "func": [
+      {
+        "name": "both"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "know if a value satisfies at least one of a list of predicates",
+    "func": [
+      {
+        "name": "anyPass"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "know if a value satisfies at every one of a list of predicates",
+    "func": [
+      {
+        "name": "allPass"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "produce an empty value",
+    "func": [
+      {
+        "name": "empty"
+      }
+    ]
+  },
+  {
+    "type": "logic",
+    "action": "know if a value is empty",
+    "func": [
+      {
+        "name": "isEmpty"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "compare for value equality",
+    "func": [
+      {
+        "name": "equals"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "compare for reference equality",
+    "func": [
+      {
+        "name": "identical"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "know if a value is less than another",
+    "func": [
+      {
+        "name": "lt"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "know if a value is less than or equal to another",
+    "func": [
+      {
+        "name": "lte"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "know if a value is greater than another",
+    "func": [
+      {
+        "name": "gt"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "know if a value is greater than or equal to another",
+    "func": [
+      {
+        "name": "gte"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "find the smallest of two values",
+    "func": [
+      {
+        "name": "min"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "find the smallest of two values based on custom logic",
+    "func": [
+      {
+        "name": "minBy"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "find the largest of two values",
+    "func": [
+      {
+        "name": "max"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "action": "find the largest of two values based on custom logic",
+    "func": [
+      {
+        "name": "maxBy"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "increment a number by one",
+    "func": [
+      {
+        "name": "inc"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "decrement a number by one",
+    "func": [
+      {
+        "name": "dec"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "add two numbers",
+    "func": [
+      {
+        "name": "add"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "subtract one number from another",
+    "func": [
+      {
+        "name": "subtract"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "multiple two numbers",
+    "func": [
+      {
+        "name": "multiply"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "divide one number by another",
+    "func": [
+      {
+        "name": "divide"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "negate a number",
+    "func": [
+      {
+        "name": "negate"
+      }
+    ]
+  },
+  {
+    "type": "math",
+    "action": "divide one number by another and get the remainder",
+    "func": [
+      {
+        "name": "modulo"
+      },
+      {
+        "name": "mathMod"
+      }
+    ]
+  }
+]

@@ -48,7 +48,6 @@ const Strong = styled.strong`
 
 const Title = styled.h1`
   margin-top: 0;
-  text-transform: capitalize;
 `
 
 const Link = styled.a`
@@ -86,14 +85,15 @@ const SectionCode = styled.div`
 `
 
 const Solution = ({ data }) => {
+  const resource = `http://ramdajs.com/docs#${data.name}`
   return (
     <Section>
       <SectionContent>
-        <Title>{data.name}</Title>
-        <Link target='_blank' rel='noopener noreferrer' href={data.resource} >
-          {data.resource}
+        <Title>{data.longname}</Title>
+        <Link target='_blank' rel='noopener noreferrer' href={resource} >
+          {resource}
         </Link>
-        {data.notation && <Notation>{data.notation}</Notation>}
+        {data.signature && <Notation>{data.signature}</Notation>}
         <Suspense fallback={<div>Loading...</div>}>
           <LazyMarkdown
             renderers={{

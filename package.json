@@ -42,6 +42,7 @@
     "babel-plugin-ramda": "^2.0.0",
     "customize-cra": "^0.2.12",
     "gh-pages": "^2.0.1",
+    "jsdoc-api": "^5.0.1",
     "react-app-rewired": "^2.1.3"
   }
 }

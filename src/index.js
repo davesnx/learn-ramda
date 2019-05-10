@@ -5,7 +5,7 @@ import { HashRouter, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
 import App from './App.jsx'
-import data from './data'
+import data from './data.json'
 import colors from './colors'
 
 const normalize = css`

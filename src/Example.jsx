@@ -1,7 +1,15 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from '@emotion/styled'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/nightOwl'
+
+const Root = styled.div`
+  .prism-code {
+    max-width: 40vw;
+    overflow-y: scroll;
+    padding: 12px 0px;
+  }
+`
 
 const Pre = styled.pre`
   margin: 0;
@@ -13,9 +21,9 @@ const Pre = styled.pre`
 
 const Example = ({ data }) => {
   return (
-    <Fragment>
-      {data.code && (
-        <Highlight {...defaultProps} code={data.code} language='js' theme={theme} >
+    <Root>
+      {data && (
+        <Highlight {...defaultProps} code={data} language='js' theme={theme} >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <Pre className={className} style={style}>
               {tokens.map((line, i) => (
@@ -25,12 +33,11 @@ const Example = ({ data }) => {
                   ))}
                 </div>
               ))}
-              {data.output && <div>{data.output}</div>}
             </Pre>
           )}
         </Highlight>
       )}
-    </Fragment>
+    </Root>
   )
 }
 
