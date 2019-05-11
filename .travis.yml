@@ -10,8 +10,9 @@ script:
 
 deploy:
   provider: script
-  script: GITHUB_TOKEN=$GITHUB_TOKEN yarn deploy
+  script: echo $GITHUB_TOKEN; yarn deploy
   skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
     branch: master
