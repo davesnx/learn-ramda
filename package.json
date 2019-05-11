@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "",
+    "test": "echo 'No tests!'",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
