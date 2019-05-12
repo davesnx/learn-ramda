@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { Global, css } from '@emotion/core'
 import { HashRouter, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
+import { YMInitializer } from 'react-yandex-metrika'
 
 import App from './App.jsx'
 import data from './data.json'
@@ -38,8 +39,20 @@ const normalize = css`
 
 const history = createBrowserHistory()
 
+
 render(
   <Fragment>
+    <YMInitializer
+      accounts={[53623087]}
+      options={{
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+        trackHash: true
+      }}
+      version="2"
+    />
     <Global styles={normalize}/>
     <HashRouter history={history} hashType='noslash'>
       <Route

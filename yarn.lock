@@ -9167,6 +9167,11 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
+react-yandex-metrika@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/react-yandex-metrika/-/react-yandex-metrika-2.5.1.tgz#9a2120e0a7e23eaa48e2032bf987efe62b437079"
+  integrity sha512-18fviX2Gf50a0Wz0Cfux26iDMKJdI1kx8X6Q6f4/eXTs5CaQWSRSvOxkKBpYYctjJbUO1NR0R3TC2NJsvf09Kw==
+
 react@^16.8.5:
   version "16.8.5"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.5.tgz#49be3b655489d74504ad994016407e8a0445de66"
