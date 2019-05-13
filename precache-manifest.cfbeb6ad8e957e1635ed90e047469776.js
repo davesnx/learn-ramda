@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/learn-ramda/static/js/runtime~main.6a6abaf8.js"
   },
   {
-    "revision": "801b6c43d8d674820096",
-    "url": "/learn-ramda/static/js/main.c0c58104.chunk.js"
+    "revision": "41d903eb82297d5c5b33",
+    "url": "/learn-ramda/static/js/main.84300379.chunk.js"
   },
   {
     "revision": "070027568d0963e7b9e4",
     "url": "/learn-ramda/static/js/3.d913e07b.chunk.js"
   },
   {
-    "revision": "7bfbdd3f27054eb02c7b",
-    "url": "/learn-ramda/static/js/2.935ed670.chunk.js"
+    "revision": "310d78f4cfd3ee06cb6b",
+    "url": "/learn-ramda/static/js/2.b8a822ef.chunk.js"
   },
   {
-    "revision": "ef7eb59254e312255cd6b9b10ff7bd1d",
+    "revision": "4b6387e1958ae0d8615e6055ceccab74",
     "url": "/learn-ramda/index.html"
   }
 ];
