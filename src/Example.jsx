@@ -6,6 +6,12 @@ import theme from 'prism-react-renderer/themes/nightOwl'
 const Root = styled.div`
   .prism-code {
     max-width: 40vw;
+
+    @media (max-width: 600px) {
+      max-width: unset;
+      width: calc(100% - 8vw);
+    }
+
     overflow-y: scroll;
     padding: 12px 0px;
   }

@@ -65,10 +65,19 @@ const Notation = styled.div`
 
 const Section = styled.div`
   display: flex;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
 const SectionContent = styled.div`
   margin-right: 5vw;
+
+  @media (max-width: 600px) {
+    margin-right: 0;
+  }
+
   flex: 1;
   animation: ${fadeUp} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
 `

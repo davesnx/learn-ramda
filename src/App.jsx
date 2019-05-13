@@ -21,17 +21,46 @@ const fadeUp = keyframes`
 
 const Header = styled.div`
   padding: 8vh 8vw 12vh;
+
+  @media (max-width: 1200px) {
+    padding: 4vh 4vw;
+    width: 100%;
+  }
 `
 
 const SelectWrapper = styled.div`
   min-width: 200px;
   margin: 0 20px;
+  line-height: 1.2;
+
+  @media (max-width: 1200px) {
+    min-width: 30vw;
+    margin: 20px;
+    margin-left: 0;
+    align-self: normal;
+  }
+
+  @media (max-width: 600px) {
+    min-width: 300px;
+  }
 `
 
 const SelectWrapperBig = styled.div`
   flex: 1;
   min-width: 320px;
   margin-left: 20px;
+  line-height: 1.2;
+
+  @media (max-width: 1200px) {
+    min-width: 30vw;
+    margin: 20px;
+    margin-left: 0;
+    align-self: normal;
+  }
+
+  @media (max-width: 600px) {
+    min-width: 300px;
+  }
 `
 
 const Sentence = styled.div`
@@ -41,6 +70,13 @@ const Sentence = styled.div`
   width: 100%;
   font-size: 24px;
   line-height: 1.25;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+    line-height: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const Title = styled.div`
@@ -48,12 +84,23 @@ const Title = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3vh;
+
+  @media (max-width: 600px) {
+    margin-bottom: 3vh;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const Description = styled.p`
   margin: 0;
   opacity: 0.6;
   font-size: 12px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 1vh;
+  }
 `
 
 const Version = styled.a`
@@ -69,6 +116,12 @@ const Version = styled.a`
 
 const Content = styled.main`
   padding: 8vh 8vw 15vh;
+
+  @media (max-width: 1200px) {
+    padding: 8vh 4vw;
+    width: 100%;
+  }
+
   background-color: rgba(0, 0, 0, 0.03);
   animation: ${fadeUp} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
 `
