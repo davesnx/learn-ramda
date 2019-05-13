@@ -1,7 +1,7 @@
 import React, { Suspense, Fragment, useState } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from 'emotion'
-import Select from 'react-select'
+import Select, { components } from 'react-select'
 import * as R from 'ramda'
 
 import colors from './colors.js'
@@ -143,6 +143,48 @@ const theme = (theme) => ({
   }
 })
 
+const OptionItem = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const OptionIcon = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  min-width: 20px;
+  padding-left: 12px;
+  text-align: center;
+  background-color: ${props => props.isFocused ? 'rgba(0, 0, 0, 0.05)' : 'transparent'};
+
+  color: rgba(42, 39, 52, 0.6);
+  min-height: 44px;
+
+  @media (max-width: 1200px) {
+    min-height: 40px;
+  }
+`
+
+const Option = (props) => {
+  return (
+    <OptionItem>
+      <OptionIcon isFocused={props.isFocused}>{typeIcons[props.label]}</OptionIcon>
+      <components.Option {...props} style={{ paddingLeft: 0 }}/>
+    </OptionItem>
+  );
+};
+
+const typeIcons = {
+  list: '[]',
+  object: '{}',
+  function: 'fn',
+  logic: 'if',
+  relation: '>=',
+  math: '+/'
+}
+
 const App = props => {
   const {
     data,
@@ -183,6 +225,7 @@ const App = props => {
           <Select
             openMenuOnFocus
             styles={customStyles}
+            components={{ Option }}
             isOptionSelected={option => option === type}
             autoFocus={!typeSelected}
             placeholder='Select type'
