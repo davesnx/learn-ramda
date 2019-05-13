@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/learn-ramda/static/js/2.935ed670.chunk.js"
   },
   {
-    "revision": "65c83474fc8f69b4541918634c42ff0d",
+    "revision": "ef7eb59254e312255cd6b9b10ff7bd1d",
     "url": "/learn-ramda/index.html"
   }
 ];
