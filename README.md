@@ -35,4 +35,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-[![Build Status](https://travis-ci.org/davesnx/learn-ramda.svg?branch=master)](https://travis-ci.org/davesnx/learn-ramda)
+[![Build status][ci-image] ][ci-url]
+[![semantic-release][semantic-image] ][semantic-url]
+[![js-standard-style][standard-image]][standard-url]
+
+[ci-image]: https://travis-ci.org/davesnx/learn-ramda.svg?branch=master
+[ci-url]: https://travis-ci.org/davesnx/learn-ramda
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
+[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[standard-url]: http://standardjs.com/
