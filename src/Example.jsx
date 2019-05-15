@@ -33,9 +33,9 @@ const Example = ({ data }) => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <Pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div {...getLineProps({ line, key: i })} key={i}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span {...getTokenProps({ token, key })} key={key}/>
                   ))}
                 </div>
               ))}
