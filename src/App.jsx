@@ -19,7 +19,7 @@ const fadeUp = keyframes`
   100% {
     opacity: 1;
   }
-`;
+`
 
 const Header = styled.div`
   padding: 8vh 8vw 12vh;
@@ -28,7 +28,7 @@ const Header = styled.div`
     padding: 4vh 4vw;
     width: 100%;
   }
-`;
+`
 
 const SelectWrapper = styled.div`
   min-width: 200px;
@@ -45,7 +45,7 @@ const SelectWrapper = styled.div`
   @media (max-width: 600px) {
     min-width: 300px;
   }
-`;
+`
 
 const SelectWrapperBig = styled.div`
   flex: 1;
@@ -63,7 +63,7 @@ const SelectWrapperBig = styled.div`
   @media (max-width: 600px) {
     min-width: 300px;
   }
-`;
+`
 
 const Sentence = styled.div`
   display: flex;
@@ -79,7 +79,7 @@ const Sentence = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`;
+`
 
 const Title = styled.div`
   display: flex;
@@ -93,7 +93,7 @@ const Title = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`;
+`
 
 const Description = styled.p`
   margin: 0;
@@ -103,7 +103,7 @@ const Description = styled.p`
   @media (max-width: 600px) {
     margin-bottom: 1vh;
   }
-`;
+`
 
 const StyledLink = css`
   margin: 0;
@@ -113,11 +113,11 @@ const StyledLink = css`
   &:hover {
     opacity: 0.8;
   }
-`;
+`
 
 const Version = styled.a`
   ${StyledLink}
-`;
+`
 
 const Content = styled.main`
   padding: 8vh 8vw 15vh;
@@ -129,13 +129,13 @@ const Content = styled.main`
 
   background-color: rgba(0, 0, 0, 0.03);
   animation: ${fadeUp} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
-`;
+`
 
 const customStyles = {
   indicatorSeparator: () => ({
     display: "none"
   })
-};
+}
 
 const customTheme = theme => ({
   ...theme,
@@ -146,12 +146,12 @@ const customTheme = theme => ({
     primary50: colors.grey,
     primary25: colors.grey
   }
-});
+})
 
 const OptionItem = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 const OptionIcon = styled.span`
   display: flex;
@@ -171,7 +171,7 @@ const OptionIcon = styled.span`
   @media (max-width: 1200px) {
     min-height: 40px;
   }
-`;
+`
 
 const Option = props => {
   return (
@@ -181,8 +181,8 @@ const Option = props => {
       </OptionIcon>
       <components.Option {...props} style={{ paddingLeft: 0 }} />
     </OptionItem>
-  );
-};
+  )
+}
 
 const GithubLink = styled.a`
   ${StyledLink}
@@ -190,7 +190,7 @@ const GithubLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const typeIcons = {
   list: "[]",
@@ -199,7 +199,7 @@ const typeIcons = {
   logic: "if",
   relation: ">=",
   math: "+/"
-};
+}
 
 const App = props => {
   const {
@@ -293,7 +293,7 @@ const App = props => {
         </Suspense>
       )}
     </Fragment>
-  );
-};
+  )
+}
 
-export default App;
+export default App
