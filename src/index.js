@@ -5,7 +5,7 @@ import { HashRouter, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { YMInitializer } from 'react-yandex-metrika'
 
-import App from './app.jsx'
+import App from './app_.jsx'
 import data from './data.json'
 import colors from './colors'
 
