@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/learn-ramda/precache-manifest.cfbeb6ad8e957e1635ed90e047469776.js"
+  "/learn-ramda/precache-manifest.27938be3beb3c99f224578ba2f36e9b9.js"
 );
 
 workbox.clientsClaim();
