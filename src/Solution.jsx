@@ -4,7 +4,7 @@ import * as R from 'ramda'
 import { keyframes } from 'emotion'
 
 import colors from './colors'
-import Example from './Example.jsx'
+import Example from './example.jsx'
 const LazyMarkdown = React.lazy(() => import('react-markdown'))
 
 const fadeUp = keyframes`

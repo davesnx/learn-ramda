@@ -4,6 +4,7 @@
   "description": "Learn ramda, the interactive way",
   "keywords": [
     "ramda",
+    "ramdajs",
     "learn",
     "fp"
   ],
@@ -26,12 +27,10 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "echo 'No tests!'",
+    "test": "testcafe 'chrome:headless' ./test",
+    "lint": "eslint --ext .js,.jsx .",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
@@ -42,8 +41,12 @@
   "devDependencies": {
     "babel-plugin-ramda": "^2.0.0",
     "customize-cra": "^0.2.12",
+    "eslint-config-davesnx-rules": "^3.0.0",
     "gh-pages": "^2.0.1",
+    "husky": "^2.3.0",
     "jsdoc-api": "^5.0.1",
-    "react-app-rewired": "^2.1.3"
+    "lint-staged": "^8.1.7",
+    "react-app-rewired": "^2.1.3",
+    "testcafe": "^1.1.4"
   }
 }

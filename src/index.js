@@ -5,12 +5,12 @@ import { HashRouter, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { YMInitializer } from 'react-yandex-metrika'
 
-import App from './App.jsx'
+import App from './app.jsx'
 import data from './data.json'
 import colors from './colors'
 
 const normalize = css`
-  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600');
+  @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600");
 
   * {
     box-sizing: border-box;
@@ -18,8 +18,9 @@ const normalize = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  html, body {
-    font-family: 'IBM Plex Mono', monospace;
+  html,
+  body {
+    font-family: "IBM Plex Mono", monospace;
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -39,7 +40,6 @@ const normalize = css`
 
 const history = createBrowserHistory()
 
-
 render(
   <Fragment>
     <YMInitializer
@@ -51,9 +51,9 @@ render(
         webvisor: true,
         trackHash: true
       }}
-      version="2"
+      version='2'
     />
-    <Global styles={normalize}/>
+    <Global styles={normalize} />
     <HashRouter history={history} hashType='noslash'>
       <Route
         path={'/:type?/:action?'}

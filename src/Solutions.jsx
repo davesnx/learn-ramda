@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from '@emotion/styled'
-import Solution from './Solution.jsx'
+import Solution from './solution.jsx'
 
 const Root = styled.div`
   > * + * {
