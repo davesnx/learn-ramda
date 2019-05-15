@@ -247,6 +247,7 @@ const App = props => {
           I have a
           <SelectWrapper>
             <Select
+              classNames='select-type'
               openMenuOnFocus
               styles={customStyles}
               components={{ Option }}

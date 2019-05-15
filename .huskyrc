@@ -1,6 +1,5 @@
 {
   "hooks": {
-    "pre-push": "npm test",
     "pre-commit": "npx lint-staged"
   }
 }
