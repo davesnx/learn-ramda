@@ -1,12 +1,14 @@
 import React, { Suspense, Fragment, useState } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from 'emotion'
+import { css } from '@emotion/core'
 import Select, { components } from 'react-select'
 import * as R from 'ramda'
 
 import colors from './colors.js'
 import { slug, unslug } from './lib/slug'
 import RamdaIcon from './icons/ramda.jsx'
+import GithubIcon from './icons/github.jsx'
 import Solutions from './Solutions.jsx'
 
 const fadeUp = keyframes`
@@ -103,15 +105,18 @@ const Description = styled.p`
   }
 `
 
-const Version = styled.a`
+const StyledLink = css`
   margin: 0;
   opacity: 0.6;
   font-size: 12px;
 
-
   &:hover {
     opacity: 0.8;
   }
+`
+
+const Version = styled.a`
+  ${StyledLink}
 `
 
 const Content = styled.main`
@@ -173,8 +178,16 @@ const Option = (props) => {
       <OptionIcon isFocused={props.isFocused}>{typeIcons[props.label]}</OptionIcon>
       <components.Option {...props} style={{ paddingLeft: 0 }}/>
     </OptionItem>
-  );
-};
+  )
+}
+
+const GithubLink = styled.a`
+  ${StyledLink}
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const typeIcons = {
   list: '[]',
@@ -215,6 +228,10 @@ const App = props => {
         <Description>
           Find the right method you need in Ramda <RamdaIcon />
         </Description>
+        <GithubLink href='https://github.com/davesnx/learn-ramda'>
+          <GithubIcon />
+          davesnx/learn-ramda
+        </GithubLink>
         <Version target='_blank' rel='noopener noreferrer' href='https://github.com/ramda/ramda/releases/tag/0.26.0'>
           ramda@0.26.0
         </Version>
