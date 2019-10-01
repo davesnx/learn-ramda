@@ -29,7 +29,7 @@
     "build": "react-app-rewired build",
     "test:debug": "testcafe 'chrome' ./test",
     "test": "exit 0",
-    "lint": "eslint --ext .js,.jsx ."
+    "lint": "eslint ."
   },
   "browserslist": [
     ">0.2%",
