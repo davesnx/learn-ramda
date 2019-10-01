@@ -229,7 +229,7 @@ const App = props => {
       <Header>
         <Title>
           <Description>
-            Find the right method you need in Ramda <RamdaIcon />
+            Find the right method you need in RamdaJS <RamdaIcon />
           </Description>
           <GithubLink href='https://github.com/davesnx/learn-ramda'>
             <GithubIcon />
