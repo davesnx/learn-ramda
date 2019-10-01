@@ -29,9 +29,7 @@
     "build": "react-app-rewired build",
     "test:debug": "testcafe 'chrome' ./test",
     "test": "exit 0",
-    "lint": "eslint --ext .js,.jsx .",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages-with-token -d build"
+    "lint": "eslint --ext .js,.jsx ."
   },
   "browserslist": [
     ">0.2%",
