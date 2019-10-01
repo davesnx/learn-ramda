@@ -4,6 +4,9 @@ node_js: "10"
 
 cache: yarn
 
+build:
+  - yarn build
+
 deploy:
   provider: script
   script: yarn deploy
