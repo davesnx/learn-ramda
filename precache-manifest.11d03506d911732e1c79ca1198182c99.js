@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "6311c42da4a5c0e5e045",
-    "url": "/learn-ramda/static/js/main.0d7a3f73.chunk.js"
+    "revision": "949911d77f11a5a88b7c",
+    "url": "/learn-ramda/static/js/main.3e091776.chunk.js"
   },
   {
     "revision": "bda06eee3e78345afed3",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/learn-ramda/static/js/3.d913e07b.chunk.js"
   },
   {
-    "revision": "07b772d471885ae7c4d512d804d745fb",
+    "revision": "f603fcf26056aff2677e374108443648",
     "url": "/learn-ramda/index.html"
   }
 ];
