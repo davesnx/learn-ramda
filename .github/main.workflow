@@ -1,24 +1,26 @@
-workflow "Build and Publish" {
+workflow "Build and deploy" {
   on = "push"
-  resolves = ["Publish"]
+  resolves = ["Deploy"]
 }
 
-action "Build" {
-  uses = "nuxt/actions-yarn@master"
+action "Install" {
+  uses = "actions/npm@e7aaefe"
   args = "install"
 }
 
-action "Filter out master branch" {
-  uses = "actions/bin/filter@master"
-  needs = ["Deploy"]
-  args = "branch master"
+action "Build" {
+  uses = "actions/npm@e7aaefe"
+  args = "run build"
+  needs = ["Install"]
 }
 
-action "Deploy to GitHub Pages" {
-  uses = "Cecilapp/GitHub-Pages-deploy@master"
+action "Deploy" {
+  uses = "nchaulet/github-action-gh-pages@master"
+  secrets = [
+    "GITHUB_TOKEN",
+  ]
+  needs = ["Build"]
   env = {
-    BUILD_DIR = "build/"
-    EMAIL = "dsnxmoreno@gmail.org"
+    PUBLIC_PATH = "build"
   }
-  secrets = ["GH_TOKEN_LEARN_RAMDA"]
 }
