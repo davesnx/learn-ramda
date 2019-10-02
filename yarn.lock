@@ -5191,10 +5191,10 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-davesnx-rules@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/eslint-config-davesnx-rules/-/eslint-config-davesnx-rules-5.0.0.tgz#cde9e83e71bf626dfc19f199db7a196c3081f1a3"
-  integrity sha512-8sw6eGau33RpUW3n6GcuazQzpagSd5431HU7xvE8M4lraHIZm+54nhaqKmC/bE73fRsQHyRyuklyFeV4nA3IDA==
+eslint-config-davesnx-rules@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/eslint-config-davesnx-rules/-/eslint-config-davesnx-rules-1.0.0.tgz#eb626747d305b09da80006e20622f4bc3a3f0e46"
+  integrity sha512-OvajSzBKGrLxTC4nEJK8eoupxM/3tCMObe2uAQ1rjLdFH8O9AvYvFFlmgEJ66rBKeBJluq4kNmTnfhBfr7MXKA==
   dependencies:
     babel-eslint "^10.0.3"
     eslint "^6.5.1"
