@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import styled from '@emotion/styled'
 import * as R from 'ramda'
-import { keyframes } from 'emotion'
+import { keyframes } from '@emotion/core'
 
 import colors from './colors'
 import Example from './example.jsx'
@@ -99,7 +99,7 @@ const Solution = ({ data }) => {
     <Section>
       <SectionContent>
         <Title>{data.longname}</Title>
-        <Link target='_blank' rel='noopener noreferrer' href={resource} >
+        <Link target="_blank" rel="noopener noreferrer" href={resource}>
           {resource}
         </Link>
         {data.signature && <Notation>{data.signature}</Notation>}
