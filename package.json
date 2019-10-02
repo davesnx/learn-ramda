@@ -41,8 +41,6 @@
     "babel-plugin-ramda": "^2.0.0",
     "customize-cra": "^0.2.12",
     "eslint-config-davesnx-rules": "^3.0.0",
-    "gh-pages": "^2.0.1",
-    "gh-pages-with-token": "^1.0.0",
     "husky": "^2.3.0",
     "jsdoc-api": "^5.0.1",
     "lint-staged": "^8.1.7",
