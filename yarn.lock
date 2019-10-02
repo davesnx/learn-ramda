@@ -5191,10 +5191,10 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-davesnx-rules@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/eslint-config-davesnx-rules/-/eslint-config-davesnx-rules-4.0.0.tgz#6cd7730465ecc103a9ccd055bd34890286af4991"
-  integrity sha512-mfFswmR6Ysh/6AvdEV5bxyzJeqCNPDJGQv1qIqMY/GtS81ohWknH+IORNPZr9Lp9JIcrRhd/9o92oXRWac5f6w==
+eslint-config-davesnx-rules@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/eslint-config-davesnx-rules/-/eslint-config-davesnx-rules-5.0.0.tgz#cde9e83e71bf626dfc19f199db7a196c3081f1a3"
+  integrity sha512-8sw6eGau33RpUW3n6GcuazQzpagSd5431HU7xvE8M4lraHIZm+54nhaqKmC/bE73fRsQHyRyuklyFeV4nA3IDA==
   dependencies:
     babel-eslint "^10.0.3"
     eslint "^6.5.1"
@@ -5210,7 +5210,9 @@ eslint-config-davesnx-rules@^4.0.0:
     eslint-plugin-react "^7.15.1"
     eslint-plugin-react-hooks "^2.1.1"
     eslint-plugin-standard "^4.0.1"
+    husky "^3.0.8"
     prettier "^1.18.2"
+    prettier-config-standard "^1.0.1"
 
 eslint-config-prettier-standard@^3.0.1:
   version "3.0.1"
@@ -10543,6 +10545,11 @@ prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.npmjs.org/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+prettier-config-standard@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/prettier-config-standard/-/prettier-config-standard-1.0.1.tgz#fe669bbe1d2c8d9437d82e3bc7d5d76e0756d93e"
+  integrity sha512-S0zuixvAFlc0zruhYEDMsjt2VG/e5S5hSbqGuxTMWA0ygjII8EP9U7c/wsCQyjjAoaYG82bUsVmaSQ6veQ+u6g==
 
 prettier-linter-helpers@^1.0.0:
   version "1.0.0"

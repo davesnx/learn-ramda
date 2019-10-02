@@ -1,14 +1,14 @@
-import React, { Suspense, Fragment, useState } from "react";
-import styled from "@emotion/styled";
-import { css, keyframes } from "@emotion/core";
-import Select, { components } from "react-select";
-import * as R from "ramda";
+import React, { Suspense, Fragment, useState } from 'react'
+import styled from '@emotion/styled'
+import { css, keyframes } from '@emotion/core'
+import Select, { components } from 'react-select'
+import * as R from 'ramda'
 
-import colors from "./colors.js";
-import { slug, unslug } from "./lib/slug";
-import RamdaIcon from "./icons/ramda.jsx";
-import GithubIcon from "./icons/github.jsx";
-import Solutions from "./solutions.jsx";
+import colors from './colors.js'
+import { slug, unslug } from './lib/slug'
+import RamdaIcon from './icons/ramda.jsx'
+import GithubIcon from './icons/github.jsx'
+import Solutions from './solutions.jsx'
 
 const fadeUp = keyframes`
   0%  {
@@ -18,7 +18,7 @@ const fadeUp = keyframes`
   100% {
     opacity: 1;
   }
-`;
+`
 
 const Header = styled.div`
   padding: 8vh 8vw 12vh;
@@ -27,7 +27,7 @@ const Header = styled.div`
     padding: 4vh 4vw;
     width: 100%;
   }
-`;
+`
 
 const SelectWrapper = styled.div`
   min-width: 200px;
@@ -44,7 +44,7 @@ const SelectWrapper = styled.div`
   @media (max-width: 600px) {
     min-width: 300px;
   }
-`;
+`
 
 const SelectWrapperBig = styled.div`
   flex: 1;
@@ -62,7 +62,7 @@ const SelectWrapperBig = styled.div`
   @media (max-width: 600px) {
     min-width: 300px;
   }
-`;
+`
 
 const Sentence = styled.div`
   display: flex;
@@ -78,7 +78,7 @@ const Sentence = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`;
+`
 
 const Title = styled.div`
   display: flex;
@@ -92,7 +92,7 @@ const Title = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`;
+`
 
 const Description = styled.p`
   margin: 0;
@@ -102,7 +102,7 @@ const Description = styled.p`
   @media (max-width: 600px) {
     margin-bottom: 1vh;
   }
-`;
+`
 
 const StyledLink = css`
   margin: 0;
@@ -112,11 +112,11 @@ const StyledLink = css`
   &:hover {
     opacity: 0.8;
   }
-`;
+`
 
 const Version = styled.a`
   ${StyledLink}
-`;
+`
 
 const Content = styled.main`
   padding: 8vh 8vw 15vh;
@@ -128,13 +128,13 @@ const Content = styled.main`
 
   background-color: rgba(0, 0, 0, 0.03);
   animation: ${fadeUp} 500ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
-`;
+`
 
 const customStyles = {
   indicatorSeparator: () => ({
-    display: "none"
+    display: 'none'
   })
-};
+}
 
 const customTheme = theme => ({
   ...theme,
@@ -145,12 +145,12 @@ const customTheme = theme => ({
     primary50: colors.grey,
     primary25: colors.grey
   }
-});
+})
 
 const OptionItem = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 const OptionIcon = styled.span`
   display: flex;
@@ -162,7 +162,7 @@ const OptionIcon = styled.span`
   padding-left: 12px;
   text-align: center;
   background-color: ${props =>
-    props.isFocused ? "rgba(0, 0, 0, 0.05)" : "transparent"};
+    props.isFocused ? 'rgba(0, 0, 0, 0.05)' : 'transparent'};
 
   color: rgba(42, 39, 52, 0.6);
   min-height: 44px;
@@ -170,7 +170,7 @@ const OptionIcon = styled.span`
   @media (max-width: 1200px) {
     min-height: 40px;
   }
-`;
+`
 
 const Option = props => {
   return (
@@ -180,8 +180,8 @@ const Option = props => {
       </OptionIcon>
       <components.Option {...props} style={{ paddingLeft: 0 }} />
     </OptionItem>
-  );
-};
+  )
+}
 
 const GithubLink = styled.a`
   ${StyledLink}
@@ -189,39 +189,39 @@ const GithubLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const typeIcons = {
-  list: "[]",
-  object: "{}",
-  function: "fn",
-  logic: "if",
-  relation: ">=",
-  math: "+/"
-};
+  list: '[]',
+  object: '{}',
+  function: 'fn',
+  logic: 'if',
+  relation: '>=',
+  math: '+/'
+}
 
 const App = props => {
   const {
     data,
     match: { params },
     history
-  } = props;
+  } = props
 
-  const types = R.uniq(R.map(R.prop("type"), data));
-  const typeOptions = R.map(v => ({ label: v }), types);
+  const types = R.uniq(R.map(R.prop('type'), data))
+  const typeOptions = R.map(v => ({ label: v }), types)
 
-  const [type, setType] = useState({ label: params.type });
+  const [type, setType] = useState({ label: params.type })
   const [action, setAction] = useState({
     label: params.action && unslug(params.action)
-  });
+  })
 
-  const actionsByType = R.filter(R.propEq("type", type.label), data);
-  const actionOptions = R.map(v => ({ label: v.action, ...v }), actionsByType);
+  const actionsByType = R.filter(R.propEq('type', type.label), data)
+  const actionOptions = R.map(v => ({ label: v.action, ...v }), actionsByType)
 
-  const typeSelected = type && R.length(actionsByType) !== 0;
-  const actionSelected = action && R.length(actionsByType) !== 0;
+  const typeSelected = type && R.length(actionsByType) !== 0
+  const actionSelected = action && R.length(actionsByType) !== 0
 
-  const optionAction = R.find(a => a.label === action.label, actionOptions);
+  const optionAction = R.find(a => a.label === action.label, actionOptions)
 
   return (
     <Fragment>
@@ -237,8 +237,7 @@ const App = props => {
           <Version
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/ramda/ramda/releases/tag/0.26.0"
-          >
+            href="https://github.com/ramda/ramda/releases/tag/0.26.0">
             ramda@0.26.0
           </Version>
         </Title>
@@ -254,9 +253,9 @@ const App = props => {
               autoFocus={!typeSelected}
               placeholder="Select type"
               onChange={option => {
-                setAction({});
-                setType(option);
-                history.push("/" + option.label);
+                setAction({})
+                setType(option)
+                history.push('/' + option.label)
               }}
               options={typeOptions}
               value={type}
@@ -274,8 +273,8 @@ const App = props => {
                   placeholder="Select an action"
                   options={actionOptions}
                   onChange={option => {
-                    history.push("/" + params.type + "/" + slug(option.label));
-                    setAction(option);
+                    history.push('/' + params.type + '/' + slug(option.label))
+                    setAction(option)
                   }}
                   value={action}
                   theme={customTheme}
@@ -293,7 +292,7 @@ const App = props => {
         </Suspense>
       )}
     </Fragment>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -1,5 +1,3 @@
 const { override, addBabelPlugins } = require('customize-cra')
 
-module.exports = override(
-  ...addBabelPlugins('ramda')
-)
+module.exports = override(...addBabelPlugins('ramda'))
