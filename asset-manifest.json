@@ -1,13 +1,15 @@
 {
-  "main.js": "/learn-ramda/static/js/main.3e091776.chunk.js",
-  "main.js.map": "/learn-ramda/static/js/main.3e091776.chunk.js.map",
-  "runtime~main.js": "/learn-ramda/static/js/runtime~main.6a6abaf8.js",
-  "runtime~main.js.map": "/learn-ramda/static/js/runtime~main.6a6abaf8.js.map",
-  "static/js/2.0abfa773.chunk.js": "/learn-ramda/static/js/2.0abfa773.chunk.js",
-  "static/js/2.0abfa773.chunk.js.map": "/learn-ramda/static/js/2.0abfa773.chunk.js.map",
-  "static/js/3.d913e07b.chunk.js": "/learn-ramda/static/js/3.d913e07b.chunk.js",
-  "static/js/3.d913e07b.chunk.js.map": "/learn-ramda/static/js/3.d913e07b.chunk.js.map",
-  "index.html": "/learn-ramda/index.html",
-  "precache-manifest.11d03506d911732e1c79ca1198182c99.js": "/learn-ramda/precache-manifest.11d03506d911732e1c79ca1198182c99.js",
-  "service-worker.js": "/learn-ramda/service-worker.js"
+  "files": {
+    "main.js": "/learn-ramda/static/js/main.cbbfe8ee.chunk.js",
+    "main.js.map": "/learn-ramda/static/js/main.cbbfe8ee.chunk.js.map",
+    "runtime-main.js": "/learn-ramda/static/js/runtime-main.4d6fd373.js",
+    "runtime-main.js.map": "/learn-ramda/static/js/runtime-main.4d6fd373.js.map",
+    "static/js/2.1e6af847.chunk.js": "/learn-ramda/static/js/2.1e6af847.chunk.js",
+    "static/js/2.1e6af847.chunk.js.map": "/learn-ramda/static/js/2.1e6af847.chunk.js.map",
+    "static/js/3.82b134a8.chunk.js": "/learn-ramda/static/js/3.82b134a8.chunk.js",
+    "static/js/3.82b134a8.chunk.js.map": "/learn-ramda/static/js/3.82b134a8.chunk.js.map",
+    "index.html": "/learn-ramda/index.html",
+    "precache-manifest.4891a08d4c50965b784eff1b4ab9bd8c.js": "/learn-ramda/precache-manifest.4891a08d4c50965b784eff1b4ab9bd8c.js",
+    "service-worker.js": "/learn-ramda/service-worker.js"
+  }
 }
