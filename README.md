@@ -8,6 +8,8 @@ When I was digging into ramda, I found the [Ramda documentation](http://ramdajs.
 
 So, I decided to help and create a little UI to interactively find the method that works for you. Hope you enjoy it!
 
+![learn-ramda website screenshot](./docs/demo.png)
+
 > If you still are lost with the FP glossary I would recommend to take a look at [hemanth/functional-programming-jargon](https://github.com/hemanth/functional-programming-jargon)
 
 ## Thanks
