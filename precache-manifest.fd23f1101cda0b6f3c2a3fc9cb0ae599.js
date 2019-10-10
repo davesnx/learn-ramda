@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "83d48f5d633c37f1ae4fdfba09419d2f",
+    "revision": "2a54a90c8261155cdaafbfd653f9e4b7",
     "url": "/learn-ramda/index.html"
   },
   {
