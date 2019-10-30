@@ -1,8 +1,8 @@
 # 🐏 Learn ramda, the interactive way
 
-Those recent years Functional Programming paradigms became more present in the JavaScript ecosystem. From the first functional approach I saw from underscore library, many years passed, and we are now at a place where many of us see the benefits in writing code this way and immutabilty in mind.
+Those recent years Functional Programming paradigms became more present in the JavaScript ecosystem. From the first functional approach I saw from underscore library, many years passed, and we are now at a place where many of us see the benefits in writing code this way and immutability in mind.
 
-Still all the functional jargon can be a barrier for beginners. Not only individuals that want to get their heads into FP, but also teams that have use-cases of complex data manipulation and don't see the benefit from using a FP library.
+Still, all the functional jargon can be a barrier for beginners. Not only individuals that want to get their heads into FP, but also teams that have use-cases of complex data manipulation and don't see the benefit from using an FP library.
 
 When I was digging into ramda, I found the [Ramda documentation](http://ramdajs.com/docs/) has a list of all the methods and some crazy examples in addition to a more helpful a wiki resource: [What-Function-Should-I-Use](https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use) that I still use from time to time.
 
