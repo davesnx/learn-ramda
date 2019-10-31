@@ -29,9 +29,14 @@ Could [suggest](https://github.com/davesnx/learn-ramda/issues/new) some new code
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can learn more in their [documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### `npm start`
+### Install dependencies
+Dependencies must be installed before running the project.
+They can be installed by running `npm install` or `yarn install`.
 
-Runs the app in the development mode.<br>
+### Development server
+Start the development server by running `npm start`
+
+This runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
