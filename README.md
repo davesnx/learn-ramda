@@ -10,12 +10,12 @@ So, I decided to help and create a little UI to interactively find the method th
 
 ![learn-ramda website screenshot](./docs/demo.png)
 
-> If you still are lost with the FP glossary I would recommend to take a look at [hemanth/functional-programming-jargon](https://github.com/hemanth/functional-programming-jargon)
+> If you still are lost with the FP glossary I would recommend taking a look at [hemanth/functional-programming-jargon](https://github.com/hemanth/functional-programming-jargon)
 
 ## Thanks
 
-- Many thanks to **[Josep Martins](https://josepmartins.com)** for design the UI & teach me how.
-- Kudos to [Sarah Drasner (**@sdras**)](https://github.com/sdras) for inspire me with: https://sdras.github.io/array-explorer
+- Many thanks to **[Josep Martins](https://josepmartins.com)** for designing the UI & teach me how.
+- Kudos to [Sarah Drasner (**@sdras**)](https://github.com/sdras) for inspiring me with: https://sdras.github.io/array-explorer
 - Kudos to [Stefano Vozza (**@svozza**)](https://github.com/svozza) for creating all the documentation https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use
 
 ## I need some help
@@ -23,7 +23,7 @@ So, I decided to help and create a little UI to interactively find the method th
 I want to improve the example code snippets. Right now, I got all of them from ramda jsdoc's source code, the same ones in [ramdajs.com/docs](https://ramdajs.com/docs).
 
 Many times I don't find them useful, so I would love your help on improve it.
-Could [suggest](https://github.com/davesnx/learn-ramda/issues/new) some new code examples for some methods and hopefully some day we could improve the official docs!
+Could [suggest](https://github.com/davesnx/learn-ramda/issues/new) some new code examples for some methods and hopefully someday we could improve the official docs!
 
 ## Want to run it locally?
 
