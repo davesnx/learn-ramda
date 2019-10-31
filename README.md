@@ -2,15 +2,14 @@
 
 Those recent years Functional Programming paradigms became more present in the JavaScript ecosystem. From the first functional approach I saw from underscore library, many years passed, and we are now at a place where many of us see the benefits in writing code this way and immutability in mind.
 
-Still, all the functional jargon can be a barrier for beginners. Not only individuals that want to get their heads into FP, but also teams that have use-cases of complex data manipulation and don't see the benefit from using an FP library.
+Still, all the functional jargon can be a barrier for beginners. Not only individuals that want to get their heads into functional programming, but also teams that have use-cases of complex data manipulation and don't see the benefit from using an functional programming library.
 
 When I was digging into ramda, I found the [Ramda documentation](http://ramdajs.com/docs/) has a list of all the methods and some crazy examples in addition to a more helpful a wiki resource: [What-Function-Should-I-Use](https://github.com/ramda/ramda/wiki/What-Function-Should-I-Use) that I still use from time to time.
 
 So, I decided to help and create a little UI to interactively find the method that works for you. Hope you enjoy it!
 
 ![learn-ramda website screenshot](./docs/demo.png)
-
-> If you still are lost with the FP glossary I would recommend taking a look at [hemanth/functional-programming-jargon](https://github.com/hemanth/functional-programming-jargon)
+> If you still are lost with the functional programming glossary I would recommend taking a look at [hemanth/functional-programming-jargon](https://github.com/hemanth/functional-programming-jargon)
 
 ## Thanks
 
