@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/learn-ramda/precache-manifest.37a2734ff2d360e90579c6bf8be52bfe.js"
+  "/learn-ramda/precache-manifest.117382621d90724e8c074beb2efb82e7.js"
 );
 
 self.addEventListener('message', (event) => {
