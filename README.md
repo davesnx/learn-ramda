@@ -1,4 +1,4 @@
-# 🐏 Learn ramda, the interactive way
+# 🐏 The interactive way to learn ramda
 
 Those recent years Functional Programming paradigms became more present in the JavaScript ecosystem. From the first functional approach I saw from underscore library, many years passed, and we are now at a place where many of us see the benefits in writing code this way and immutability in mind.
 
